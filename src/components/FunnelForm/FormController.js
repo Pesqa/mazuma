@@ -76,8 +76,7 @@ export class FormController extends Component{
             });
           };
           
-          const handleRadioChange = e => {
-              alert(e.currentTarget.value)
+          const handleRadioChange = e => {              
             this.setState({ [e.target.name] : e.currentTarget.value });
           };
           const handleChange =  e => {
