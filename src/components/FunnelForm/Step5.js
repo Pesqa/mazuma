@@ -1,17 +1,26 @@
 import React, { useState } from "react"
 
-const Step5 = ({ values, handleChange, nextStep, prevStep, restartStep }) => {
+const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartStep }) => {
   const [btnstatus, setBtnstatus] = useState(values.payroll ? true : false);
+  const [payrollvalue, setPayrollvalue] = useState(values.payroll);
 
   const handleSubmit = () => {
-    nextStep();
+    if(payrollvalue==0)
+    {
+      formSubmit();
+    }
+    else
+    {
+      nextStep() 
+    }
   }
   const handleSubmitBack = () => {
     prevStep();
   }
 
   const handleClick = (e) => {
-    handleChange(e)   
+    handleChange(e)  
+    setPayrollvalue(e.currentTarget.value) 
     setBtnstatus(true)   
   }
 
@@ -35,7 +44,7 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, restartStep }) => {
               </div>
               <button onClick={restartStep} className="mx-2 my-2">Restart</button>
               <button onClick={handleSubmitBack} className="mx-2 my-2">Back</button>
-              {btnstatus && <button onClick={handleSubmit} className="mx-2 my-2">Next</button>}
+              {btnstatus && <button onClick={handleSubmit} className="mx-2 my-2">{payrollvalue==0 ? 'See my price now!' : 'Next'}</button>}
             </div>
         </div>       
       </div>

@@ -1,14 +1,18 @@
 import React from "react"
 import Step1 from "./Step1"
 
-import { useStateValue } from '../../StateProvider'
-
 const Step7 = ({ values, prevStep }) => {
   if(values.quote_price===0){
       return <Step1 />
   }
   const handleSubmitBack = () => {
-    prevStep();
+    if(values.payroll == 1 ){
+      prevStep();
+    }
+    else
+    {
+      prevStep(2); 
+    }
   }
     return (
         <div className="container d-flex flex-column justify-content-center text-center">

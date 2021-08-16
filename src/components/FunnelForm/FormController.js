@@ -14,8 +14,8 @@ export class FormController extends Component{
         company:'',
         firstname: '',
         lastname: '',
-        vat: 0,
-        payroll: 0,
+        vat: null,
+        payroll: null,
         payslips: 0,
         quote_price: 0
       };    
@@ -37,16 +37,23 @@ export class FormController extends Component{
         const formSubmit = () => {
             const selected_business = bprice.filter((item)=>item.name===business)
             const selected_business_price = selected_business ? selected_business[0].price : 0
-            const selected_vat_price = vat === 1 ? 15 : 0
-            const selected_payroll_price = payroll === 1 ? 10 : 0
-            const selected_payslips_price = payslips !==0 ? payslips * 2 : 0
-            const quote_price_value = parseInt(selected_business_price) + parseInt(selected_vat_price) + parseInt(selected_payroll_price) + parseInt(selected_payslips_price)
+            const selected_vat_price = vat == 1 ? 15 : 0
+            let selected_payslips_price = 0
+            if(payroll == 1 ){
+                selected_payslips_price = payslips<=5 ? 10 : parseInt(payslips) * 2                 
+            }
+            const quote_price_value = parseInt(selected_business_price) + parseInt(selected_vat_price) + parseInt(selected_payslips_price)
             this.setState({ quote_price : quote_price_value })
             const { step } = this.state;
-            this.setState({
-              step: step + 1
-            });
+            if(payroll == 0 ){
+                nextStep(2)
+            }
+            else
+            {
+                nextStep()
+            }            
         }
+        
         const restartStep = () => {
             const { step } = this.state;
             this.setState({
@@ -55,24 +62,23 @@ export class FormController extends Component{
                 company:'',
                 firstname: '',
                 lastname: '',
-                vat: 0,
-                payroll: 0,
+                vat: null,
+                payroll: null,
                 payslips: 0,
                 quote_price: 0
             });
           };
         
-          const nextStep = () => {            
+          const nextStep = (num=1) => {            
             const { step } = this.state;
             this.setState({
-              step: step + 1
+              step: step + num
             });
           };
-        
-          const prevStep = () => {
+          const prevStep = (num=1) => {
             const { step } = this.state;
             this.setState({
-              step: step - 1
+              step: step - num
             });
           };
           
@@ -124,10 +130,11 @@ export class FormController extends Component{
             case 5:
                 return (
                     <Step5
-                        nextStep={nextStep}
+                        nextStep={nextStep}                       
                         prevStep={prevStep}
                         restartStep={restartStep}
                         handleChange={handleRadioChange}
+                        formSubmit={formSubmit}
                         values={values}
                     />
                 )

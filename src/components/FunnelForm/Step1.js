@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 
-const Step1 = ({ values, handleChange, nextStep }) => {
+const Step1 = ({ handleChange, nextStep }) => {
   const [btnstatus, setBtnstatus] = useState(false);
 
   const handleSubmit = () => {
