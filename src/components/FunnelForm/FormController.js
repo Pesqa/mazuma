@@ -24,16 +24,12 @@ export class FormController extends Component{
         const { step } = this.state;
         const { firstname, lastname, business, company, vat, payroll, payslips, quote_price } = this.state;
         const values = { firstname, lastname, business, company, vat, payroll, payslips, quote_price };
-        console.log('Total Quote Price ', values.quote_price)
         const bprice = [
             {"name":"Sole Trader","price": "28"},
             {"name":"Partnership","price": "60"},
             {"name":"LLP","price": "75"},
             {"name":"Ltd Company","price": "85"}
         ]
-        
-        
-        console.log('Business Name', quote_price)
         const formSubmit = () => {
             const selected_business = bprice.filter((item)=>item.name===business)
             const selected_business_price = selected_business ? selected_business[0].price : 0

@@ -1,6 +1,21 @@
 $theme-colors: (
-  "primary": #00ff22,
-  "danger": #fff555
+  "primary": #573393,
+  "bg-info": #22b0fc,
+  "secondary":#343A40,
+  "danger": #fff555,
+  "dark": #7c8087,
+  "light": #F6F6F6
 );
-$primary: #13C7CD;
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$display-font-weight: 700;
+
 @import '~bootstrap/scss/bootstrap.scss';
+@import 'node_modules/react-modal-video/scss/modal-video.scss';

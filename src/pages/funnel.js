@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { useStateValue } from '../StateProvider'
 
-import Layout from "../components/layout"
+import Layout from "../components/common/layout"
 
 import FormController from "../components/FunnelForm/FormController"
 
