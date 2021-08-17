@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import ModalVideo from 'react-modal-video'
 import Layout from "../components/common/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero"
