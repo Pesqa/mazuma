@@ -1,11 +1,21 @@
 import React, { useEffect, useRef, useState } from "react"
-import { Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
+import { useSwipeable } from "react-swipeable";
+import { MenuStyles } from "../../layout/MenuStyles"
+import SideBar from "../common/SideMenu"
+
+
+
 import Header from "./header"
 import Footer from "./footer"
 const Layout = ({ children }) => {
+  const [isOpen, setOpen] = React.useState(false);
+  const handlers = useSwipeable({
+    trackMouse: true,
+    onSwipedRight: () => setOpen(true)
+  });
   const [isSticky, setSticky] = useState(false);
   const ref = useRef(null);
   const { site, HeaderLogo, FooterLogo, appstoreImg, playstoreImg } = useStaticQuery(graphql`
@@ -65,18 +75,38 @@ const Layout = ({ children }) => {
     };
   }, []);
   return (  
-    <>
+    <div id="outer">
+      <MenuStyles />
+        <SwipeLayer {...handlers} />
+        <SideBar
+          isOpen={isOpen}
+          onStateChange={s => setOpen(s.isOpen)}
+          pageWrapId={"inner-wrap"}
+          outerContainerId={"outer"}
+        />
     <Header logoImg={HeaderLogo} isSticky={isSticky}/>
-    <div className="container-fluid p-0" ref={ref}>
+    <div className="container-fluid p-0" ref={ref} id="inner-wrap">
     {children}
     </div>
     <Footer logoImg={FooterLogo} appstoreImg={appstoreImg} playstoreImg={playstoreImg} />    
-    </>
+    </div>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+const SwipeLayer = styled.div`  
+  display: none;
 
+  @media screen and (max-width: 991px) {
+    display: block;
+    float: left;
+    position: fixed;
+    width: 10px;
+    height: 100%;
+    z-index: 900;
+    top: 80px;
+  }
+`
 export default Layout

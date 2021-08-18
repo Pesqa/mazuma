@@ -72,8 +72,18 @@ const Footer = ({ logoImg, appstoreImg, playstoreImg }) => {
             </div>
             <div className="col-lg-4 col-sm-6 col-xs-12">
                 <div className="region w-100 float-left mb-10">
-                <h4 className="text-white-50 font-weight-bold text-uppercase font-size-3 mb-7">region</h4>
-                <div className="nice-select language font-size-2 text-uppercase font-weight-bold bg-dark p-3 pr-4 text-white" tabindex="0"> <span className="current">France (English)</span>
+                <h4 className="text-white-50 font-weight-bold text-uppercase font-size-3 mb-6">region</h4>
+                <div className="my-md-4 my-sm-4">
+                    <div className="input_wrap select-box">
+                        <select className="py-md-2 px-md-2 py-sm-2 px-sm-2 rounded-1 border border-1 border-secondary-dark bg-secondary text-light">
+                            <option>FRANCE (ENGLISH)</option>
+                            <option>UNITED STATES</option>
+                            <option>GERMANY (DEUTSCH)</option>
+                            <option>GERMANY (ENGLISH)</option>
+                            <option>NETHERLANDS (NEDERLANDS)</option>
+                            <option>NETHERLANDS (ENGLISH)</option>
+                        </select>
+                    </div>
                     {/* <ul className="list">
                     <li data-value="france" className="option selected focus">France (English)</li>
                     <li data-value="saab" className="option">France (Français)</li>

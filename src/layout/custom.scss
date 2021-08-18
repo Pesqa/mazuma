@@ -2,9 +2,12 @@ $theme-colors: (
   "primary": #573393,
   "bg-info": #22b0fc,
   "secondary":#343A40,
+  "secondary-dark":#4A4A4A,
   "danger": #fff555,
   "dark": #7c8087,
-  "light": #F6F6F6
+  "light": #F6F6F6,
+  "dark-light": #DADADA,
+  "full-dark": #000000,
 );
 $display-font-sizes: (
   1: 5rem,
@@ -12,9 +15,10 @@ $display-font-sizes: (
   3: 4rem,
   4: 3.5rem,
   5: 3rem,
-  6: 2.5rem
+  6: 1.5rem,
+  7: 1.35rem
 );
-
 $display-font-weight: 700;
+
 
 @import '~bootstrap/scss/bootstrap.scss';
