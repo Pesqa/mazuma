@@ -76,7 +76,7 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
           <input type="hidden" name="form-name" value="contact"/>          
           <input type="text" name="business" value={values.business}/>
           <input type="text" name="company" value={values.company}/>
-          <input type="text" name="firstname" value={values.firstname}/>
+          <input type="text" name="name" value={values.firstname}/>
           <input type="text" name="lastname" value={values.lastname}/>
           <input type="text" name="vat" value={values.vat ==1 ? 'Yes' : 'No'}/>
           <input type="text" name="payroll" value={values.payroll==1 ? 'Yes' : 'No'}/>
