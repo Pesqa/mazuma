@@ -15,7 +15,7 @@ const Step1 = ({ handleChange, nextStep }) => {
     return (
         <div className="contaier">
           <FormHead />
-          <form name="contact" method="POST" data-netlify="true">
+          {/* <form name="contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact"/>
 
           <p>
@@ -27,7 +27,7 @@ const Step1 = ({ handleChange, nextStep }) => {
           <p>
             <button type="submit">Send</button>
           </p>
-        </form>
+        </form> */}
           <div className="row d-flex justify-content-center my-3">
               <div className="col-md-8 text-center col-sm-12">
               <h2 className="display-5 mb-6 w-100">Hey! I’m Arina, plz select the type of your business</h2> 

@@ -72,19 +72,8 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-md-5 col-sm-9 col-xs-12">
-          <form name="contact" netlify>
-          <p>
-            <label>Name <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Email <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
-          {/* <form name="contact" method="POST" data-netlify="true">
-          <input type="text" name="form-name" value="contact"/>
+          <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact"/>          
           <input type="text" name="business" value={values.business}/>
           <input type="text" name="company" value={values.company}/>
           <input type="text" name="firstname" value={values.firstname}/>
@@ -124,10 +113,11 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
                )}
               <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
                 {btnstatus && <button type="submit" className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>}
+                <button type="submit">Send</button>
               </div>
               
             
-            </form> */}
+            </form>
             </div>
         </div>       
       </div>
