@@ -72,8 +72,8 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-md-5 col-sm-9 col-xs-12">
-          <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact"/>          
+          <form name="quoteform" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="quoteform"/>          
           <input type="text" name="business" value={values.business}/>
           <input type="text" name="company" value={values.company}/>
           <input type="text" name="firstname" value={values.firstname}/>
