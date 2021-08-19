@@ -15,6 +15,17 @@ const Step1 = ({ handleChange, nextStep }) => {
     return (
         <div className="contaier">
           <FormHead />
+          <form name="contact" netlify>
+          <p>
+            <label>Name <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Email <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
           <div className="row d-flex justify-content-center my-3">
               <div className="col-md-8 text-center col-sm-12">
               <h2 className="display-5 mb-6 w-100">Hey! I’m Arina, plz select the type of your business</h2> 

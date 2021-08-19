@@ -72,36 +72,17 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-md-5 col-sm-9 col-xs-12">
-          <form name="contact" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact"/>
-                <div className="row">
-                    <div className="col-12">
-                    <div className="single_input">
-                        <input type="text" name="name" placeholder="Full Name" />
-                    </div>
-                    </div>
-                    <div className="col-lg-6">
-                    <div className="single_input">
-                        <input type="text" name="phone" placeholder="Phone" />
-                    </div>
-                    </div>
-                    <div className="col-lg-6">
-                    <div className="single_input">
-                        <input type="email" name="email" placeholder="Email" />
-                    </div>
-                    </div>
-                    <div className="col-12">
-                    <div className="single_input">
-                        <textarea name="message" placeholder="Message" defaultValue={""} />
-                    </div>
-                    </div>
-                    <div className="col-12">
-                    <div className="Submit_button">
-                        <button type="submit">SEND</button>
-                    </div>
-                    </div>
-                </div>
-                </form>
+          <form name="contact" netlify>
+          <p>
+            <label>Name <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Email <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
           {/* <form name="contact" method="POST" data-netlify="true">
           <input type="text" name="form-name" value="contact"/>
           <input type="text" name="business" value={values.business}/>
