@@ -1,9 +1,28 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import FormHead from "./FormHead"
 const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartStep }) => {
   const [btnstatus, setBtnstatus] = useState(values.payroll ? true : false);
   const [payrollvalue, setPayrollvalue] = useState(values.payroll);
-
+  const [payslipsvalue, setPayslipsvalue] = useState(values.payslips);
+  const elementRef = useRef(0);
+  const { firstname, lastname, business, company, vat, payroll, payslips, quote_price } = values
+  const bprice = [
+    {"name":"Sole Trader","price": "28"},
+    {"name":"Partnership","price": "60"},
+    {"name":"LLP","price": "75"},
+    {"name":"Ltd Company","price": "85"}
+  ]
+  const calculateQuote = (payroll, payslips)=>{
+    const selected_business = bprice.filter((item)=>item.name===business)
+    const selected_business_price = selected_business ? selected_business[0].price : 0
+    const selected_vat_price = vat == 1 ? 15 : 0
+    let selected_payslips_price = 0
+    if(payroll == 1 ){
+      selected_payslips_price = payslips<=5 ? 10 : parseInt(payslips) * 2                 
+    }
+    const quote_price_value = parseInt(selected_business_price) + parseInt(selected_vat_price) + parseInt(selected_payslips_price)
+    elementRef.current.value = quote_price_value;
+  }
   const handleSubmit = () => {    
       formSubmit();
   }
@@ -11,12 +30,15 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
     prevStep();
   }
   const handleSelectChange = (e) => {
-    handleChange(e)   
+    handleChange(e)
+    setPayslipsvalue(e.target.value)
+    calculateQuote(payrollvalue, e.target.value)
   }
   const handleClick = (e) => {
     handleChange(e)  
     setPayrollvalue(e.currentTarget.value) 
-    setBtnstatus(true)   
+    setBtnstatus(true)  
+    calculateQuote(e.currentTarget.value, payslipsvalue) 
   }
   const options_data = [
     { "name":"1", "value":"1" },
@@ -50,15 +72,16 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-md-5 col-sm-9 col-xs-12">
-          <form data-netlify="true" name="priceQuoteForm" method="post">
+          <form data-netlify="true" name="priceQuoteForm" method="post" action="/thankyou">
           <input type="hidden" name="form-name" value="priceQuoteForm" />
-          {/* <input type="hidden" name="business" value={values.business}/>
+          <input type="hidden" name="business" value={values.business}/>
           <input type="hidden" name="company" value={values.company}/>
           <input type="hidden" name="firstname" value={values.firstname}/>
           <input type="hidden" name="lastname" value={values.lastname}/>
           <input type="hidden" name="vat" value={values.vat ==1 ? 'Yes' : 'No'}/>
           <input type="hidden" name="payroll" value={values.payroll==1 ? 'Yes' : 'No'}/>
-          <input type="hidden" name="payslips" value={values.payslips}/> */}
+          <input type="hidden" name="payslips" value={values.payslips}/>
+          <input type="hidden" name="quote_price" value={values.quote_price} ref={elementRef}/>
             
               <div className="row">
                 <div className="col-sm-6">
@@ -89,7 +112,7 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
                 </div>   
                )}
               <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
-                {btnstatus && <button onSubmit={handleSubmit} className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>}
+                {btnstatus && <button className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>}
               </div>
               
             
