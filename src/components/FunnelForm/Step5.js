@@ -73,15 +73,15 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
           <div className="row d-flex justify-content-center">
           <div className="col-md-5 col-sm-9 col-xs-12">
           <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact"/>
-          <input type="hidden" name="business" value={values.business}/>
-          <input type="hidden" name="company" value={values.company}/>
-          <input type="hidden" name="firstname" value={values.firstname}/>
-          <input type="hidden" name="lastname" value={values.lastname}/>
-          <input type="hidden" name="vat" value={values.vat ==1 ? 'Yes' : 'No'}/>
-          <input type="hidden" name="payroll" value={values.payroll==1 ? 'Yes' : 'No'}/>
-          <input type="hidden" name="payslips" value={values.payslips}/>
-          <input type="hidden" name="quote_price" value={values.quote_price} ref={elementRef}/>
+          <input type="text" name="form-name" value="contact"/>
+          <input type="text" name="business" value={values.business}/>
+          <input type="text" name="company" value={values.company}/>
+          <input type="text" name="firstname" value={values.firstname}/>
+          <input type="text" name="lastname" value={values.lastname}/>
+          <input type="text" name="vat" value={values.vat ==1 ? 'Yes' : 'No'}/>
+          <input type="text" name="payroll" value={values.payroll==1 ? 'Yes' : 'No'}/>
+          <input type="text" name="payslips" value={values.payslips}/>
+          <input type="text" name="quote_price" value={values.quote_price} ref={elementRef}/>
             
               <div className="row">
                 <div className="col-sm-6">
