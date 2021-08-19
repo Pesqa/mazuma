@@ -16,7 +16,7 @@ const Step1 = ({ handleChange, nextStep }) => {
         <div className="contaier">
           <FormHead />
           <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="form-name" value="contact"/>
 
           <p>
             <label>Name <input type="text" name="name" /></label>
