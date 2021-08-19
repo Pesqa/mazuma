@@ -1,76 +1,32 @@
-import React, { useState } from "react"
-import FormHead from "./FormHead"
-const Step6 = ({ values, handleChange, prevStep, restartStep, formSubmit }) => {
+import React from "react"
+import Step1 from "./Step1"
 
-  const handleSubmit = () => {
-    formSubmit();
+const Step6 = ({ values, nextStep, prevStep, restartStep }) => {
+  if(values.quote_price===0){
+      return <Step1 />
   }
   const handleSubmitBack = () => {
-    prevStep();
+    if(values.payroll == 1 ){
+      prevStep();
+    }
+    else
+    {
+      prevStep(2); 
+    }
   }
-
-  const handleClick = (e) => {
-    handleChange(e)   
-  }
-  const options_data = [
-    { "name":"1", "value":"1" },
-    { "name":"2", "value":"2" },
-    { "name":"3", "value":"3" },
-    { "name":"4", "value":"4" },
-    { "name":"5", "value":"5" },
-    { "name":"6", "value":"6" },
-    { "name":"7", "value":"7" },
-    { "name":"8", "value":"8" },
-    { "name":"9", "value":"9" },
-    { "name":"10", "value":"10" },
-    { "name":"11", "value":"11" },
-    { "name":"12", "value":"12" },
-    { "name":"13", "value":"13" },
-    { "name":"14", "value":"14" },
-    { "name":"15", "value":"15" },
-    { "name":"16", "value":"16" },
-    { "name":"17", "value":"17" },
-    { "name":"18", "value":"18" },
-    { "name":"19", "value":"19" },
-    { "name":"20+", "value":"20" }
-  ]
-  console.log('Select Value ',values.payslips);
     return (
-      <div className="contaier">  
-      <FormHead restartStep={restartStep} prevStep={prevStep} />
-        <div className="row d-flex justify-content-center my-3">
-              <div className="col-md-8 text-center col-sm-12">
-              <h2 className="display-5 mb-6 w-100">How many payslips?</h2> 
-              </div>
-          </div>    
+        <div className="container d-flex flex-column justify-content-center text-center">
           <div className="row d-flex justify-content-center">
-            <div className="col-md-5 col-sm-9 col-xs-12">
-              <div className="row">
-                <div className="col-sm-12">
-                  <select name="payslips" className="w-100 py-3 px-4 mb-2 rounded-1 border border-info" onChange={handleClick}>
-                    { options_data.map((item,index)=>{
-                      if(values.payslips === item.value){
-                        return (<option key={index} value={item.value} selected>{item.name}</option> )  
-                      }
-                      else
-                      {
-                        return (<option key={index} value={item.value}>{item.name}</option>  ) 
-                      }                                       
-                      
-                    }) }
-                  </select>
-                </div>                             
-              </div>
-              <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
-                {/* <button onClick={restartStep} className="mx-2 my-2">Restart</button>
-                <button onClick={handleSubmitBack} className="mx-2 my-2">Back</button> */}
-                <button onClick={handleSubmit} className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>
-              </div>
-              
-              
-            </div>
-        </div>       
-      </div>
+            <div className="col-md-6 col-sm-9 col-xs-12">
+        {/* <FormHead restartStep={restartStep}/> */}
+        <h2 className="display-5 my-2 w-100"><span>&#163;</span>{values.quote_price}</h2>
+        <h6 className="display-6 mb-5 fw-bolder">Quote Price</h6>
+        <p>This quote is based upon the information that you have given us and an average number of transactions</p>
+        <p className="gray">Your monthly subscription will cost, excluding VAT, this is for our basic package. We know that choosing an accountant is a big deal, so we’re offering a 10% discount if you sign up with Mazuma in July 2021! If you’d like sign up simply book a call with an advisor below. The onboarding process is quick and easy.</p>
+        {/* <button onClick={handleSubmitBack} className="mx-2 my-2">Back</button> */}
+        </div>
+        </div>
+        </div>
     )
 }
 

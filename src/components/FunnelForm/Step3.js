@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import FormHead from "./FormHead"
 
 const Step3 = ({ values, handleChange, nextStep, prevStep, restartStep }) => {
-  const [btnstatus, setBtnstatus] = useState(false);
+ //const [btnstatus, setBtnstatus] = useState(false);
   const [firstname, setFirstname] = useState(values.firstname);
   const [lastname, setLastname] = useState(values.lastname);
 

@@ -4,27 +4,42 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
   const [btnstatus, setBtnstatus] = useState(values.payroll ? true : false);
   const [payrollvalue, setPayrollvalue] = useState(values.payroll);
 
-  const handleSubmit = () => {
-    if(payrollvalue==0)
-    {
+  const handleSubmit = () => {    
       formSubmit();
-    }
-    else
-    {
-      nextStep() 
-    }
   }
   const handleSubmitBack = () => {
     prevStep();
   }
-
+  const handleSelectChange = (e) => {
+    handleChange(e)   
+  }
   const handleClick = (e) => {
     handleChange(e)  
     setPayrollvalue(e.currentTarget.value) 
     setBtnstatus(true)   
   }
-
-
+  const options_data = [
+    { "name":"1", "value":"1" },
+    { "name":"2", "value":"2" },
+    { "name":"3", "value":"3" },
+    { "name":"4", "value":"4" },
+    { "name":"5", "value":"5" },
+    { "name":"6", "value":"6" },
+    { "name":"7", "value":"7" },
+    { "name":"8", "value":"8" },
+    { "name":"9", "value":"9" },
+    { "name":"10", "value":"10" },
+    { "name":"11", "value":"11" },
+    { "name":"12", "value":"12" },
+    { "name":"13", "value":"13" },
+    { "name":"14", "value":"14" },
+    { "name":"15", "value":"15" },
+    { "name":"16", "value":"16" },
+    { "name":"17", "value":"17" },
+    { "name":"18", "value":"18" },
+    { "name":"19", "value":"19" },
+    { "name":"20+", "value":"20" }
+  ]
     return (
       <div className="contaier">
         <FormHead restartStep={restartStep} prevStep={prevStep} />
@@ -34,7 +49,17 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
               </div>
           </div>    
           <div className="row d-flex justify-content-center">
-            <div className="col-md-5 col-sm-9 col-xs-12">
+          <div className="col-md-5 col-sm-9 col-xs-12">
+          <form data-netlify="true" name="priceQuoteForm" method="post">
+          <input type="hidden" name="form-name" value="priceQuoteForm" />
+          {/* <input type="hidden" name="business" value={values.business}/>
+          <input type="hidden" name="company" value={values.company}/>
+          <input type="hidden" name="firstname" value={values.firstname}/>
+          <input type="hidden" name="lastname" value={values.lastname}/>
+          <input type="hidden" name="vat" value={values.vat ==1 ? 'Yes' : 'No'}/>
+          <input type="hidden" name="payroll" value={values.payroll==1 ? 'Yes' : 'No'}/>
+          <input type="hidden" name="payslips" value={values.payslips}/> */}
+            
               <div className="row">
                 <div className="col-sm-6">
                   <input type="radio" value="1" checked = {values.payroll == 1} onChange={e=>handleClick(e)} name="payroll"/> Yes, I’m
@@ -43,12 +68,32 @@ const Step5 = ({ values, handleChange, nextStep, prevStep, formSubmit, restartSt
                   <input type="radio" value="0" checked = {values.payroll == 0} onChange={e=>handleClick(e)} name="payroll"/> No
                 </div>                
               </div>
+              {btnstatus &&  payrollvalue == 1 && (
+                  <div className="row d-flex justify-content-center my-3">
+                  <div className="col-md-8 text-center col-sm-12">
+                   <h3 className="display-6 mb-6 w-100">How many payslips?</h3> 
+                  </div>
+                  <div className="col-sm-12">               
+                    <select name="payslips" className="w-100 py-3 px-4 mb-2 rounded-1 border border-info" onChange={handleSelectChange}>
+                      { options_data.map((item,index)=>{
+                        if(values.payslips === item.value){
+                          return (<option key={index} value={item.value} selected>{item.name}</option> )  
+                        }
+                        else
+                        {
+                          return (<option key={index} value={item.value}>{item.name}</option>  ) 
+                        }    
+                      }) }
+                    </select>
+                  </div>        
+                </div>   
+               )}
               <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
-                {/* <button onClick={restartStep} className="mx-2 my-2">Restart</button>
-                <button onClick={handleSubmitBack} className="mx-2 my-2">Back</button> */}
-                {btnstatus && <button onClick={handleSubmit} className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">{payrollvalue==0 ? 'See my price now!' : 'Next'}</button>}
+                {btnstatus && <button onSubmit={handleSubmit} className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>}
               </div>
               
+            
+            </form>
             </div>
         </div>       
       </div>

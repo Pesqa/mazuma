@@ -30,7 +30,12 @@ export class FormController extends Component{
             {"name":"LLP","price": "75"},
             {"name":"Ltd Company","price": "85"}
         ]
-        const formSubmit = () => {
+        const encode = (data) => {
+            return Object.keys(data)
+                .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+                .join("&")
+          }
+        const formSubmit = (e) => {
             const selected_business = bprice.filter((item)=>item.name===business)
             const selected_business_price = selected_business ? selected_business[0].price : 0
             const selected_vat_price = vat == 1 ? 15 : 0
@@ -40,14 +45,15 @@ export class FormController extends Component{
             }
             const quote_price_value = parseInt(selected_business_price) + parseInt(selected_vat_price) + parseInt(selected_payslips_price)
             this.setState({ quote_price : quote_price_value })
-            const { step } = this.state;
-            if(payroll == 0 ){
-                nextStep(2)
-            }
-            else
-            {
-                nextStep()
-            }            
+            e.preventDefault()
+            let myForm = document.getElementById('priceQuoteForm');
+            let formData = new FormData(myForm)
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            }).then(() => console.log('Form successfully submitted')).catch((error) =>
+                alert(error))        
         }
         
         const restartStep = () => {
