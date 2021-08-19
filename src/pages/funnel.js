@@ -7,7 +7,11 @@ import FormController from "../components/FunnelForm/FormController"
 const Funnel = () => {
     return (
         <Layout>
-            <FormController/> 
+            <div class="w-100 py-5 my-5">
+                <div class="container">                    
+                    <FormController/> 
+                </div>
+            </div>
         </Layout>
     )
 }

@@ -148,7 +148,9 @@ export class FormController extends Component{
             case 7:
                 return (
                     <Step7
+                        nextStep={nextStep}
                         prevStep={prevStep}
+                        restartStep={restartStep}
                         values={values}
                     />
                 )

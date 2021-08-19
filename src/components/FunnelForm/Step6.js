@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import FormHead from "./FormHead"
 const Step6 = ({ values, handleChange, prevStep, restartStep, formSubmit }) => {
 
   const handleSubmit = () => {
@@ -36,17 +36,18 @@ const Step6 = ({ values, handleChange, prevStep, restartStep, formSubmit }) => {
   ]
   console.log('Select Value ',values.payslips);
     return (
-      <div className="contaier">
-        <div className="row d-flex justify-content-center mb-lg-2 mb-sm-5">
-            <div className="col-md-8 text-center col-sm-12">
-            <h2>How many payslips</h2> 
-            </div>
-        </div>  
-        <div className="row d-flex justify-content-center">
-            <div className="col-md-7 col-sm-12">
+      <div className="contaier">  
+      <FormHead restartStep={restartStep} prevStep={prevStep} />
+        <div className="row d-flex justify-content-center my-3">
+              <div className="col-md-8 text-center col-sm-12">
+              <h2 className="display-5 mb-6 w-100">How many payslips?</h2> 
+              </div>
+          </div>    
+          <div className="row d-flex justify-content-center">
+            <div className="col-md-5 col-sm-9 col-xs-12">
               <div className="row">
                 <div className="col-sm-12">
-                  <select name="payslips" className="w-100" onChange={handleClick}>
+                  <select name="payslips" className="w-100 py-3 px-4 mb-2 rounded-1 border border-info" onChange={handleClick}>
                     { options_data.map((item,index)=>{
                       if(values.payslips === item.value){
                         return (<option key={index} value={item.value} selected>{item.name}</option> )  
@@ -60,9 +61,13 @@ const Step6 = ({ values, handleChange, prevStep, restartStep, formSubmit }) => {
                   </select>
                 </div>                             
               </div>
-              <button onClick={restartStep} className="mx-2 my-2">Restart</button>
-              <button onClick={handleSubmitBack} className="mx-2 my-2">Back</button>
-              <button onClick={handleSubmit} className="mx-2 my-2">See my price now!</button>
+              <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
+                {/* <button onClick={restartStep} className="mx-2 my-2">Restart</button>
+                <button onClick={handleSubmitBack} className="mx-2 my-2">Back</button> */}
+                <button onClick={handleSubmit} className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>
+              </div>
+              
+              
             </div>
         </div>       
       </div>
