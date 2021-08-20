@@ -13,4 +13,4 @@ export const wrapPageElement = ({ element }) => {
 //     <Layout>{element}</Layout>
 // );
 
-export { default as wrapRootElement } from './src/store/ReduxWrapper';
+export { default as wrapRootElement } from './src/store/reduxWrapper';
