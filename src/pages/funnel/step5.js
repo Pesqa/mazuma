@@ -12,6 +12,9 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
             payload: 1,
         });
       }
+    const submitHandler = ()=>{
+      alert('Thank you');
+    }
     const handleClick = (e) => {    
         dispatch({
             type: 'ADD_PAYROLL',
@@ -79,7 +82,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-md-5 col-sm-9 col-xs-12">         
-          <form name="quoteform" method="POST" data-netlify="true">
+          <form name="quoteform" method="POST" data-netlify="true" onSubmit={submitHandler}>
           <input type="hidden" name="form-name" value="quoteform"/>    
           <input type="hidden" name="name" value={firstname}/>
           <input type="hidden" name="lastname" value={lastname}/>                
