@@ -63,7 +63,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
         type: 'ADD_QUOTE_PRICE',
         payload: quote_price_value
       });  
-      setEquote(quote_price_value)    
+      setEquote(Encrypt(quote_price_value))    
     }
     const options_data = [
         { "name":"1", "value":"1" },
