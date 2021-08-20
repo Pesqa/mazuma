@@ -20,6 +20,9 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
     //     }
     //   }      
     // }, [step]); 
+    const submitHandler = ()=>{
+      
+    }
     const handleClick = (e) => {    
         dispatch({
             type: 'ADD_PAYROLL',
