@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
-
+import { Decrypt } from '../../utils/functions'
 import Layout from "../../components/common/layout"
 
 const Thankyou = ({ quoteprice, dispatch}) => {
