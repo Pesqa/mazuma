@@ -5,23 +5,15 @@ import { connect } from 'react-redux';
 import Layout from "../../components/common/layout"
 
 const Thankyou = ({step, business, company, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
-    const [rerender, setRerender] = useState(); // or any state
-    const [afterRender, setAfterRender] = useState();// internal state
-
     useEffect(() => {
-        if(quoteprice==0){
+        setTimeout(() => {
+            dispatch({
+                type: 'RESET'
+            });
             navigate('/funnel');
-        }
-        if (!afterRender) return;
-        if(afterRender){
-            //alert(afterRender);
-        }
-        //setAfterRender(false);
-     }, [afterRender]);
+        }, 5000);
+     });
 
-     useEffect(() => {
-        setAfterRender(true);
-     }, [rerender]);
      
     return(
         <Layout>
