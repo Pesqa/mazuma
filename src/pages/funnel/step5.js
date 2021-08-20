@@ -79,16 +79,16 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-md-5 col-sm-9 col-xs-12">         
-          <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact"/>          
-          Business Name <input type="text" name="business" value={business}/>
-          Company Name <input type="text" name="company" value={company}/>
-          Firstname <input type="text" name="name" value={firstname}/>
-          Lastname <input type="text" name="lastname" value={lastname}/>
-          Vat <input type="text" name="vat" value={vat ==1 ? 'Yes' : 'No'}/>
-          Payroll <input type="text" name="payroll" value={payroll == 1 ? 'Yes' : 'No'}/>
-          Pay Slips <input type="text" name="payslips" value={payslips}/>
-          Quote Price <input type="text" name="quote_price" value={quoteprice}/>
+          <form name="quoteform" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="quoteform"/>    
+          <input type="text" name="name" value={firstname}/>
+          <input type="text" name="lastname" value={lastname}/>                
+          <input type="text" name="business" value={business}/>
+          <input type="text" name="company" value={company}/>          
+          <input type="text" name="vat" value={vat ==1 ? 'Yes' : 'No'}/>
+          <input type="text" name="payroll" value={payroll == 1 ? 'Yes' : 'No'}/>
+          <input type="text" name="payslips" value={payslips}/>
+          <input type="text" name="quote_price" value={quoteprice}/>
             
               <div className="row">
                 <div className="col-sm-6">
