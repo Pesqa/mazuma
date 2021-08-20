@@ -8,7 +8,7 @@ import Layout from "../../components/common/layout"
 
 const Step4 = ({step, business, company, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
-    const [equote, setEquote] = useState(vat ? true : false);
+    const [equote, setEquote] = useState(0);
     useEffect(() => {
       if(step==1){
         navigate('/funnel');
@@ -63,7 +63,6 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
         type: 'ADD_QUOTE_PRICE',
         payload: quote_price_value
       });  
-      setEquote(Encrypt(quote_price_value))    
     }
     const options_data = [
         { "name":"1", "value":"1" },
@@ -102,7 +101,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">     
-          <form name="quoteform" method="POST" data-netlify="true" action={ `/funnel/thankyou?v=${equote}` } onSubmit={submitHandler}>
+          <form name="quoteform" method="POST" data-netlify="true" action={ `/funnel/thankyou?v=${quoteprice}` } onSubmit={submitHandler}>
           <input type="hidden" name="form-name" value="quoteform"/>    
           <input type="hidden" name="name" value={firstname}/>
           <input type="hidden" name="lastname" value={lastname}/>                

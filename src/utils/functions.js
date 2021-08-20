@@ -1,6 +1,6 @@
 export const Encrypt = (value) => {
-  var result="";
-  for(i=0;i<value.length;i++)
+  var result="";  
+  for(let i=0;i<value.length;i++)
   {
     if(i<value.length-1)
     {
@@ -18,7 +18,7 @@ export const Decrypt = (value) => {
     var result="";
     var array = value.split("-");
 
-    for(i=0;i<array.length;i++)
+    for(let i=0;i<array.length;i++)
     {
         result+=String.fromCharCode(array[i]-10);
     }
