@@ -10,7 +10,6 @@ const Step2 = ({step, business, company, dispatch}) => {
             type: 'NEXT_STEP',
             payload: 1,
         });
-        alert(company)
         return navigate('/funnel/step3')
       }
     

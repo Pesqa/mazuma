@@ -11,10 +11,6 @@ const Step4 = ({step, business, company, firstname, lastname, vat, dispatch}) =>
             type: 'NEXT_STEP',
             payload: 1,
         });
-        alert(company)
-        alert(firstname)
-        alert(lastname)
-        alert(vat)
         return navigate('/funnel/step5')
       }
     const handleClick = (e) => { 

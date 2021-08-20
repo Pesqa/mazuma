@@ -1,12 +1,12 @@
 const initialState = {
     step: 1,
-    business: 'Partnership',
-    company:'dd',
-    firstname: 'first',
-    lastname: 'last',
-    vat: 1,
-    payroll: 1,
-    payslips: 12,
+    business: '',
+    company:'',
+    firstname: '',
+    lastname: '',
+    vat: null,
+    payroll: null,
+    payslips: 0,
     quoteprice: 0
   };
   
