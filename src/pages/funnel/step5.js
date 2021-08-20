@@ -25,7 +25,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
         });
       }
     const submitHandler = ()=>{
-      alert('Thank you');
+      //alert('Thank you');
     }
     const handleClick = (e) => {    
         dispatch({

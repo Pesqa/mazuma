@@ -4,14 +4,15 @@ import { connect } from 'react-redux';
 
 import Layout from "../../components/common/layout"
 
-const Thankyou = ({step, business, company, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
+const Thankyou = ({ quoteprice, dispatch}) => {
+    console.log('Quote Price ', quoteprice)
     useEffect(() => {
-        setTimeout(() => {
-            dispatch({
-                type: 'RESET'
-            });
-            navigate('/funnel');
-        }, 5000);
+        // setTimeout(() => {
+        //     dispatch({
+        //         type: 'RESET'
+        //     });
+        //     navigate('/funnel');
+        // }, 5000);
      });
 
      
