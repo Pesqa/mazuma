@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
-
+import FormHead from '../../components/FormHead'
 import Layout from "../../components/common/layout"
 
 const Step4 = ({step, business, company, firstname, lastname, vat, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
+    useEffect(() => {
+        if(step<4){
+            navigate('/funnel/step3');
+        }
+      }, [step]);
     const handleSubmit = () => {
         dispatch({
             type: 'NEXT_STEP',
@@ -22,21 +27,25 @@ const Step4 = ({step, business, company, firstname, lastname, vat, dispatch}) =>
     }
     return(
         <Layout>
-            <div className="contaier mb-5">
-                {/* <FormHead restartStep={restartStep} prevStep={prevStep} /> */}
+            <div className="container overflow-hidden my-5 pt-5">
+              <div className="row">
+                <div className="col-sm-12">
+                  <FormHead />
+                </div>
+              </div>
                 <div className="row d-flex justify-content-center my-3">
-                    <div className="col-md-8 text-center col-sm-12">
+                    <div className="col-md-7 col-sm-12 text-center col-sm-12">
                     <h2 className="display-5 mb-6 w-100">Are you VAT registered?</h2> 
                     </div>
                 </div>  
                 <div className="row d-flex justify-content-center">
-                <div className="col-md-5 col-sm-9 col-xs-12">
+                <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">
                     <div className="row">
-                        <div className="col-sm-6">
-                        <input type="radio" value="1" checked = {vat == 1} onChange={e=>handleClick(e)} name="vat"/> Yes, I’m
+                        <div className="col-sm-6 d-flex justify-content-center">
+                        <input type="radio" value="1" checked = {vat == 1} onChange={e=>handleClick(e)} name="vat"/>&nbsp;<label className="align-middle lh-base">Yes, I’m</label>
                         </div>
-                        <div className="col-sm-6">
-                        <input type="radio" value="0" checked = {vat == 0} onChange={e=>handleClick(e)} name="vat"/> Nope!
+                        <div className="col-sm-6 d-flex justify-content-center">
+                        <input type="radio" value="0" checked = {vat == 0} onChange={e=>handleClick(e)} name="vat"/>&nbsp;<label className="align-middle lh-base">Nope!</label>
                         </div>                
                     </div>
                     <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">

@@ -2,9 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
 
+import FormHead from '../../components/FormHead'
 import Layout from "../../components/common/layout"
 
 const Step2 = ({step, business, company, dispatch}) => {
+      useEffect(() => {
+        if(step<2){
+            navigate('/funnel');
+        }
+      }, [step]);
      const handleSubmit = () => {
         dispatch({
             type: 'NEXT_STEP',
@@ -21,10 +27,14 @@ const Step2 = ({step, business, company, dispatch}) => {
       }
     return(
         <Layout>
-            <div className="contaier">
-            {/* <FormHead restartStep={restartStep} prevStep={prevStep} /> */}
+            <div className="container overflow-hidden my-5 pt-5">
+              <div className="row">
+                <div className="col-sm-12">
+                  <FormHead />
+                </div>
+              </div>
             <div className="row d-flex justify-content-center my-3">
-                <div className="col-md-8 text-center col-sm-12">
+                <div className="col-md-7 col-sm-12 text-center col-sm-12">
                 <h2 className="display-5 mb-6 w-100">What is the name of your company?</h2> 
                 </div>
             </div>    

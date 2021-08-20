@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
 
+import FormHead from '../../components/FormHead'
 import Layout from "../../components/common/layout"
 
 
@@ -22,28 +23,33 @@ const Funnel = ({step, business, dispatch}) => {
         setBtnstatus(true)   
     }
     return (
-        <Layout>
-            <div className="contaier py-5 my-5">
-          {/* <FormHead /> */}
+        <Layout>          
+            <div className="container overflow-hidden my-5 pt-5">
+              <div className="row">
+                <div className="col-sm-12">
+                  <FormHead />
+                </div>
+              </div>
+            
           
           <div className="row d-flex justify-content-center my-3">
-              <div className="col-md-8 text-center col-sm-12">
+              <div className="col-md-7 col-sm-12 text-center col-sm-12">
               <h2 className="display-5 mb-6 w-100">Hey! I’m Arina, plz select the type of your business</h2> 
               </div>
           </div>  
           <div className="row d-flex justify-content-center">
-              <div className="col-md-5 col-sm-9 col-xs-12">
+              <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">
                 <div className="row">
-                  <div className="col-sm-6 py-1">
-                    <input type="radio" value="Sole Trader" onChange={e=>handleClick(e)} name="business"/> <label>Sole Trader</label>
+                  <div className="col-md-6 col-xs-6 py-1">
+                    <input type="radio" value="Sole Trader" onChange={e=>handleClick(e)} name="business"/>&nbsp;<label className="align-middle lh-1">Sole Trader</label>
                   </div>
-                  <div className="col-sm-6 py-1">
+                  <div className="col-md-6 py-1">
                     <input type="radio" value="Ltd Company" onChange={e=>handleClick(e)} name="business"/> <label>Ltd Company</label>
                   </div>
-                  <div className="col-sm-6 py-1">
+                  <div className="col-md-6 py-1">
                     <input type="radio" value="Partnership" onChange={e=>handleClick(e)} name="business"/> <label>Partnership</label>
                   </div>
-                  <div className="col-sm-6 py-1">
+                  <div className="col-md-6 py-1">
                    <input type="radio" value="LLP" onChange={e=>handleClick(e)} name="business"/> <label>LLP</label>
                    
                   </div>

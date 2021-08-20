@@ -2,10 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
 
+import FormHead from '../../components/FormHead'
 import Layout from "../../components/common/layout"
 
 const Step4 = ({step, business, company, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
+    useEffect(() => {
+      if(step==1){
+        navigate('/funnel');
+      }
+      else
+      {
+        if(step<5){
+          navigate('/funnel/step4');
+        }
+      }      
+    }, [step]);
     const handleSubmit = () => {
         dispatch({
             type: 'NEXT_STEP',
@@ -74,14 +86,19 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
       ]
     return(
         <Layout>
-            <div className="contaier">
-        <div className="row d-flex justify-content-center my-3">
-              <div className="col-md-8 text-center col-sm-12">
-              <h2 className="display-5 mb-6 w-100">Would you like us to run payroll for you?</h2> 
+          <div className="container overflow-hidden my-5 pt-5">
+              <div className="row">
+                <div className="col-sm-12">
+                  <FormHead />
+                </div>
+              </div>
+          <div className="row d-flex justify-content-center my-3">
+              <div className="col-md-7 col-sm-12 text-center col-sm-12">
+                <h2 className="display-5 mb-6 w-100">Would you like us to run payroll for you?</h2> 
               </div>
           </div>    
           <div className="row d-flex justify-content-center">
-          <div className="col-md-5 col-sm-9 col-xs-12">         
+          <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">     
           <form name="quoteform" method="POST" data-netlify="true" action="/funnel/thankyou" onSubmit={submitHandler}>
           <input type="hidden" name="form-name" value="quoteform"/>    
           <input type="hidden" name="name" value={firstname}/>
@@ -94,17 +111,17 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           <input type="hidden" name="quote_price" value={quoteprice}/>
             
               <div className="row">
-                <div className="col-sm-6">
-                  <input type="radio" value="1" checked = {payroll == 1} onChange={e=>handleClick(e)} name="payroll"/> Yes, I’m
+                <div className="col-sm-6 d-flex justify-content-center">
+                  <input type="radio" value="1" checked = {payroll == 1} onChange={e=>handleClick(e)} name="payroll"/>&nbsp;<label className="align-middle lh-base">Yes, I’m</label>
                 </div>
-                <div className="col-sm-6">
-                  <input type="radio" value="0" checked = {payroll == 0} onChange={e=>handleClick(e)} name="payroll"/> No
+                <div className="col-sm-6 d-flex justify-content-center">
+                  <input type="radio" value="0" checked = {payroll == 0} onChange={e=>handleClick(e)} name="payroll"/>&nbsp;<label className="align-middle lh-base">No</label>
                 </div>                
               </div>
               {btnstatus &&  payroll == 1 && (
-                  <div className="row d-flex justify-content-center my-3">
+                  <div className="row d-flex justify-content-center mt-5">
                   <div className="col-md-8 text-center col-sm-12">
-                   <h3 className="display-6 mb-6 w-100">How many payslips?</h3> 
+                   <h3 className="display-6 mb-1 w-100">How many payslips?</h3> 
                   </div>
                   <div className="col-sm-12">               
                     <select name="payslips" className="w-100 py-3 px-4 mb-2 rounded-1 border border-info" onChange={handleSelectChange}>
