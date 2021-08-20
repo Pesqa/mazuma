@@ -9,26 +9,17 @@ import Layout from "../../components/common/layout"
 const Step4 = ({step, business, company, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
     const [equote, setEquote] = useState(0);
-    useEffect(() => {
-      if(step==1){
-        navigate('/funnel');
-      }
-      else
-      {
-        if(step<5){
-          navigate('/funnel/step4');
-        }
-      }      
-    }, [step]);
-    const handleSubmit = () => {
-        dispatch({
-            type: 'NEXT_STEP',
-            payload: 1,
-        });
-      }
-    const submitHandler = ()=>{
-      //alert('Thank you');
-    }
+    // useEffect(() => {
+    //   if(step==1){
+    //     navigate('/funnel');
+    //   }
+    //   else
+    //   {
+    //     if(step<5){
+    //       navigate('/funnel/step4');
+    //     }
+    //   }      
+    // }, [step]); 
     const handleClick = (e) => {    
         dispatch({
             type: 'ADD_PAYROLL',
