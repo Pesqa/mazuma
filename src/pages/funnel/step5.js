@@ -82,7 +82,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-md-5 col-sm-9 col-xs-12">         
-          <form name="quoteform" method="POST" data-netlify="true" onSubmit={submitHandler}>
+          <form name="quoteform" method="POST" data-netlify="true" action="/funnel/thankyou" onSubmit={submitHandler}>
           <input type="hidden" name="form-name" value="quoteform"/>    
           <input type="hidden" name="name" value={firstname}/>
           <input type="hidden" name="lastname" value={lastname}/>                
