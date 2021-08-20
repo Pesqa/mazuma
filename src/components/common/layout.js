@@ -8,6 +8,7 @@ import SideBar from "../common/SideMenu"
 
 
 
+
 import Header from "./header"
 import Footer from "./footer"
 const Layout = ({ children }) => {
@@ -83,12 +84,12 @@ const Layout = ({ children }) => {
           onStateChange={s => setOpen(s.isOpen)}
           pageWrapId={"inner-wrap"}
           outerContainerId={"outer"}
-        />
-    <Header logoImg={HeaderLogo} isSticky={isSticky}/>
+        />   
+    <Header logoImg={HeaderLogo} isSticky={isSticky}/>      
     <div className="container-fluid p-0" ref={ref} id="inner-wrap">
     {children}
     </div>
-    <Footer logoImg={FooterLogo} appstoreImg={appstoreImg} playstoreImg={playstoreImg} />    
+    <Footer logoImg={FooterLogo} appstoreImg={appstoreImg} playstoreImg={playstoreImg} />   
     </div>
   )
 }
