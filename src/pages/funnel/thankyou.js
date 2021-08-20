@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { Decrypt } from '../../utils/functions'
 import Layout from "../../components/common/layout"
 
-const Thankyou = ({ quoteprice, dispatch}) => {
-    console.log('Quote Price ', quoteprice)
+const Thankyou = (props) => {
+    console.log('Quote Price ', props)
     useEffect(() => {
         // setTimeout(() => {
         //     dispatch({
@@ -20,12 +20,12 @@ const Thankyou = ({ quoteprice, dispatch}) => {
         <Layout>
             <div className="container d-flex flex-column justify-content-center text-center">
                 <div className="row d-flex justify-content-center">
-                    <div className="col-md-6 col-sm-9 col-xs-12">            
+                    {/* <div className="col-md-6 col-sm-9 col-xs-12">            
                         <h2 className="display-5 my-2 w-100"><span>&#163;</span>{quoteprice}</h2>
                         <h6 className="display-6 mb-5 fw-bolder">Quote Price</h6>
                         <p>This quote is based upon the information that you have given us and an average number of transactions</p>
                         <p className="gray">Your monthly subscription will cost, excluding VAT, this is for our basic package. We know that choosing an accountant is a big deal, so we’re offering a 10% discount if you sign up with Mazuma in July 2021! If you’d like sign up simply book a call with an advisor below. The onboarding process is quick and easy.</p>                        
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Layout>        
