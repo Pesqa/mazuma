@@ -4,6 +4,7 @@ import { slide as Menu } from "react-burger-menu";
 import styled from "styled-components"
 
 export default props => {
+  console.log('homepage page ',props.page)
     return (
       <>
         <Menu {...props}>          

@@ -12,7 +12,7 @@ const IndexPage = () => {
     setOpen(true)
   }
   return (
-  <Layout>
+  <Layout page="home">
     <Seo title="Home" />
     <Hero/>    
     <div className="d-flex justify-content-center bg-light">

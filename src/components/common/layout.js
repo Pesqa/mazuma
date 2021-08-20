@@ -3,15 +3,19 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { useSwipeable } from "react-swipeable";
-import { MenuStyles } from "../../layout/MenuStyles"
+
 import SideBar from "../common/SideMenu"
 
+import { HomeMenuStyles } from "../../layout/HomeMenuStyles"
+import { MenuStyles } from "../../layout/MenuStyles"
 
 
 
+
+import HomeHeader from "./homeheader"
 import Header from "./header"
 import Footer from "./footer"
-const Layout = ({ children }) => {
+const Layout = ({ page, children }) => {
   const [isOpen, setOpen] = React.useState(false);
   const handlers = useSwipeable({
     trackMouse: true,
@@ -76,20 +80,31 @@ const Layout = ({ children }) => {
     };
   }, []);
   return (  
-    <div id="outer">
+    <div id="outer" className={ page === 'home' ? 'home' : 'default'} >
+      { page === 'home' ?
+      <HomeMenuStyles />
+      :
       <MenuStyles />
+      }
+      
         <SwipeLayer {...handlers} />
         <SideBar
           isOpen={isOpen}
           onStateChange={s => setOpen(s.isOpen)}
           pageWrapId={"inner-wrap"}
           outerContainerId={"outer"}
+          page={page}
         />   
-    <Header logoImg={HeaderLogo} isSticky={isSticky}/>      
+    { page === 'home' ?
+    <HomeHeader logoImg={HeaderLogo} isSticky={isSticky}/>  
+    :
+    <Header logoImg={HeaderLogo} isSticky={isSticky}/>  
+    }
+        
     <div className="container-fluid p-0" ref={ref} id="inner-wrap">
     {children}
     </div>
-    <Footer logoImg={FooterLogo} appstoreImg={appstoreImg} playstoreImg={playstoreImg} />   
+    { page === 'home' && <Footer logoImg={FooterLogo} appstoreImg={appstoreImg} playstoreImg={playstoreImg} />  }  
     </div>
   )
 }
@@ -97,10 +112,7 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-const SwipeLayer = styled.div`  
-  display: none;
-
-  @media screen and (max-width: 991px) {
+const SwipeLayer = styled.div`    
     display: block;
     float: left;
     position: fixed;
@@ -108,6 +120,6 @@ const SwipeLayer = styled.div`
     height: 100%;
     z-index: 900;
     top: 80px;
-  }
+  
 `
 export default Layout

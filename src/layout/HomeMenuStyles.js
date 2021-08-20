@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-export const MenuStyles = createGlobalStyle`
+export const HomeMenuStyles = createGlobalStyle`
   
   ::-webkit-scrollbar {
        display: none;
@@ -38,19 +38,17 @@ export const MenuStyles = createGlobalStyle`
   color: white;
 }
 .bm-burger-button {
+    display: none;
     width: 24px;
     height: 24px;
     left: 20px;
     top: 28px;  
     position: fixed;
     @media screen and (max-width: 991px) {
-      display: block;   
+      display: block;     
     }
     @media screen and (max-width: 767px) {
       display: block;      
-    }
-    @media screen and (max-width: 600px) {
-      display: block;     
     }
     @media screen and (max-width: 345px) {
       display: block;    
@@ -70,6 +68,21 @@ background-color:rgb(87, 51, 147);
 border-radius: 3px;
 transition: all 0.3s;
 }
+/* Color/shape of burger icon bars */
+/* .bm-burger-bars:nth-child(1) {
+    width:24px;
+    margin-left: 12px;
+}
+.bm-burger-bars:nth-child(2) {
+    width:36px;
+    margin-left: 0px;
+}
+.bm-burger-bars:nth-child(3) {
+    width:16px;
+    margin-left: 20px;
+} */
+
+/* Position and sizing of clickable cross button */
 .bm-cross-button {
   display: none;
   height: 0;

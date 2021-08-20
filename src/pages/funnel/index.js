@@ -24,7 +24,7 @@ const Funnel = ({step, business, dispatch}) => {
     }
     return (
         <Layout>          
-            <div className="container overflow-hidden my-5 pt-5">
+            <div className="container overflow-hidden form-container">
               <div className="row">
                 <div className="col-sm-12">
                   <FormHead />
@@ -32,25 +32,37 @@ const Funnel = ({step, business, dispatch}) => {
               </div>
             
           
-          <div className="row d-flex justify-content-center my-3">
-              <div className="col-md-7 col-sm-12 text-center col-sm-12">
-              <h2 className="display-5 mb-6 w-100">Hey! I’m Arina, plz select the type of your business</h2> 
+          <div className="row d-flex justify-content-center">
+              <div className="col-md-8 col-sm-10 text-center">
+              <h2 className="form-sub-heading display-5 mb-3 w-100">Hey! I’m Arina, plz select the type of your business</h2> 
               </div>
           </div>  
           <div className="row d-flex justify-content-center">
-              <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">
-                <div className="row">
+              <div className="col-lg-6 col-md-7 col-sm-9 col-xs-12">
+                <div className="row customradiobtn">
                   <div className="col-md-6 col-xs-6 py-1">
-                    <input type="radio" value="Sole Trader" onChange={e=>handleClick(e)} name="business"/>&nbsp;<label className="align-middle lh-1">Sole Trader</label>
+                    <label>
+                    <input type="radio" value="Sole Trader" onChange={e=>handleClick(e)} name="business"/>
+                      <span>Sole Trader</span>
+                    </label>
                   </div>
-                  <div className="col-md-6 py-1">
-                    <input type="radio" value="Ltd Company" onChange={e=>handleClick(e)} name="business"/> <label>Ltd Company</label>
+                  <div className="col-md-6 col-xs-6 py-1">
+                    <label>
+                    <input type="radio" value="Ltd Company" onChange={e=>handleClick(e)} name="business"/>
+                      <span>Ltd Company</span>
+                    </label>
                   </div>
-                  <div className="col-md-6 py-1">
-                    <input type="radio" value="Partnership" onChange={e=>handleClick(e)} name="business"/> <label>Partnership</label>
+                  <div className="col-md-6 col-xs-6 py-1">
+                  <label>
+                  <input type="radio" value="Partnership" onChange={e=>handleClick(e)} name="business"/>
+                      <span>Partnership</span>
+                    </label>
                   </div>
-                  <div className="col-md-6 py-1">
-                   <input type="radio" value="LLP" onChange={e=>handleClick(e)} name="business"/> <label>LLP</label>
+                  <div className="col-md-6 col-xs-6 py-1">
+                    <label>
+                    <input type="radio" value="LLP" onChange={e=>handleClick(e)} name="business"/>
+                        <span>LLP</span>
+                      </label>
                    
                   </div>
                   <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">

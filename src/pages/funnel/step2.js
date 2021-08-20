@@ -27,15 +27,15 @@ const Step2 = ({step, business, company, dispatch}) => {
       }
     return(
         <Layout>
-            <div className="container overflow-hidden my-5 pt-5">
+            <div className="container overflow-hidden form-container">
               <div className="row">
                 <div className="col-sm-12">
                   <FormHead />
                 </div>
               </div>
-            <div className="row d-flex justify-content-center my-3">
-                <div className="col-md-7 col-sm-12 text-center col-sm-12">
-                <h2 className="display-5 mb-6 w-100">What is the name of your company?</h2> 
+            <div className="row d-flex justify-content-center">
+                <div className="col-md-8 col-sm-10 text-center">
+                <h2 className="form-sub-heading display-5 mb-3 w-100">What is the name of your company?</h2> 
                 </div>
             </div>    
             <div className="row d-flex justify-content-center">
@@ -49,7 +49,7 @@ const Step2 = ({step, business, company, dispatch}) => {
                         name="company"
                         onChange={e=>handleChangeHanlder(e)}
                         defaultValue={company}
-                        className="w-100 py-3 px-4 mb-2 rounded-1 border border-info"
+                        className="w-100 py-2 px-3 mb-1 rounded-1 border border-info"
                         />
                     </div>                  
                     
@@ -57,7 +57,7 @@ const Step2 = ({step, business, company, dispatch}) => {
                     <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
                     {/* <button onClick={restartStep} className="mx-2 my-2">Restart</button>
                     <button onClick={handleSubmitBack} className="mx-2 my-2">Back</button> */}
-                    {company!=='' && <button onClick={handleSubmit} className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">Next</button>}
+                    {company!=='' && <button onClick={handleSubmit} className="my-2 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">Next</button>}
                     </div>
                     
 

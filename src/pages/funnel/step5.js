@@ -9,17 +9,17 @@ import Layout from "../../components/common/layout"
 const Step4 = ({step, business, company, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
     const [equote, setEquote] = useState(0);
-    // useEffect(() => {
-    //   if(step==1){
-    //     navigate('/funnel');
-    //   }
-    //   else
-    //   {
-    //     if(step<5){
-    //       navigate('/funnel/step4');
-    //     }
-    //   }      
-    // }, [step]); 
+    useEffect(() => {
+      if(step==1){
+        navigate('/funnel');
+      }
+      else
+      {
+        if(step<5){
+          navigate('/funnel/step4');
+        }
+      }      
+    }, [step]); 
     const submitHandler = ()=>{
       
     }
@@ -82,15 +82,15 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
       ]
     return(
         <Layout>
-          <div className="container overflow-hidden my-5 pt-5">
+          <div className="container overflow-hidden form-container">
               <div className="row">
                 <div className="col-sm-12">
                   <FormHead />
                 </div>
               </div>
-          <div className="row d-flex justify-content-center my-3">
-              <div className="col-md-7 col-sm-12 text-center col-sm-12">
-                <h2 className="display-5 mb-6 w-100">Would you like us to run payroll for you?</h2> 
+          <div className="row d-flex justify-content-center">
+              <div className="col-md-8 col-sm-10 text-center">
+              <h2 className="form-sub-heading display-5 mb-3 w-100">Would you like us to run payroll for you?</h2> 
               </div>
           </div>    
           <div className="row d-flex justify-content-center">
@@ -106,21 +106,27 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           <input type="hidden" name="payslips" value={payslips}/>
           <input type="hidden" name="quote_price" value={quoteprice}/>
             
-              <div className="row">
+          <div className="row customradiobtn">
                 <div className="col-sm-6 d-flex justify-content-center">
-                  <input type="radio" value="1" checked = {payroll == 1} onChange={e=>handleClick(e)} name="payroll"/>&nbsp;<label className="align-middle lh-base">Yes, I’m</label>
+                      <label>
+                      <input type="radio" value="1" checked = {payroll == 1} onChange={e=>handleClick(e)} name="payroll"/>
+                          <span>Yes, I’m</span>
+                      </label>
                 </div>
                 <div className="col-sm-6 d-flex justify-content-center">
-                  <input type="radio" value="0" checked = {payroll == 0} onChange={e=>handleClick(e)} name="payroll"/>&nbsp;<label className="align-middle lh-base">No</label>
+                      <label>
+                      <input type="radio" value="0" checked = {payroll == 0} onChange={e=>handleClick(e)} name="payroll"/>
+                          <span>No</span>
+                      </label>
                 </div>                
               </div>
               {btnstatus &&  payroll == 1 && (
-                  <div className="row d-flex justify-content-center mt-5">
+                  <div className="row d-flex justify-content-center mt-3">
                   <div className="col-md-8 text-center col-sm-12">
                    <h3 className="display-6 mb-1 w-100">How many payslips?</h3> 
                   </div>
                   <div className="col-sm-12">               
-                    <select name="payslips" className="w-100 py-3 px-4 mb-2 rounded-1 border border-info" onChange={handleSelectChange}>
+                    <select name="payslips" className="w-100 py-2 px-3 mb-2 rounded-1 border border-info" onChange={handleSelectChange}>
                       { options_data.map((item,index)=>{
                         if(payslips == item.value){
                           return (<option key={index} value={item.value} selected>{item.name}</option> )  
@@ -135,7 +141,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
                 </div>   
                )}
               <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
-                {btnstatus && <button type="submit" className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>}
+                {btnstatus && <button type="submit" className="my-2 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>}
               </div>
               
             
