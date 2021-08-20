@@ -5,7 +5,10 @@ import { Decrypt } from '../../utils/functions'
 import Layout from "../../components/common/layout"
 
 const Thankyou = (props) => {
-    console.log('Quote Price ', props)
+    const params = new URLSearchParams(props.location.search);
+    const quoteprice = params.get("v");
+    console.log('Quote Price ', props.location)
+    console.log('Quote Price value ', quoteprice)
     useEffect(() => {
         // setTimeout(() => {
         //     dispatch({
