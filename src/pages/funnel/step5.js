@@ -36,20 +36,16 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
     const calculateQuote = (payroll, payslips)=>{
       const selected_business = bprice.filter((item)=>item.name===business)
       const selected_business_price = selected_business ? selected_business[0].price : 0
-      
       const selected_vat_price = vat == 1 ? 15 : 0
-      
       let selected_payslips_price = 0
       if(payroll == 1 ){
         selected_payslips_price = payslips<=5 ? 10 : parseInt(payslips) * 2                 
       }
-      alert(payslips)
       const quote_price_value = parseInt(selected_business_price) + parseInt(selected_vat_price) + parseInt(selected_payslips_price)
       dispatch({
         type: 'ADD_QUOTE_PRICE',
         payload: quote_price_value
-     }); 
-     
+      });      
     }
     const options_data = [
         { "name":"1", "value":"1" },
@@ -90,7 +86,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           Firstname <input type="text" name="name" value={firstname}/>
           Lastname <input type="text" name="lastname" value={lastname}/>
           Vat <input type="text" name="vat" value={vat ==1 ? 'Yes' : 'No'}/>
-          Payroll <input type="text" name="payroll" value={payroll==1 ? 'Yes' : 'No'}/>
+          Payroll <input type="text" name="payroll" value={payroll == 1 ? 'Yes' : 'No'}/>
           Pay Slips <input type="text" name="payslips" value={payslips}/>
           Quote Price <input type="text" name="quote_price" value={quoteprice}/>
             
@@ -124,7 +120,6 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
                )}
               <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
                 {btnstatus && <button type="submit" className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">See my price now!</button>}
-                <button type="submit">Send</button>
               </div>
               
             
