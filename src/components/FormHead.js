@@ -34,10 +34,6 @@ const FormHead = ({step, dispatch }) => {
 }
 const HeadForm = styled.div`
   background-image: url(${props => props.img}) !important;
-  /* background-repeat:no-repeat;
-  background-size: 100% auto;
-  background-position: center center; */
-  border:2px soild blue !important;
 `
 const mapStateToProps = state => {
   return {
