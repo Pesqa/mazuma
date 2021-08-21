@@ -41,14 +41,14 @@ const Step4 = ({step, business, company, firstname, lastname, vat, dispatch}) =>
                 <div className="row d-flex justify-content-center">
                 <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">
                 <div className="row customradiobtn">
-                        <div className="col-sm-6 d-flex justify-content-center">
-                            <label>
+                        <div className="col-md-6 col-xs-6 py-md-1">
+                            <label className="d-flex justify-content-center">
                             <input type="radio" value="1" checked = {vat == 1} onChange={e=>handleClick(e)} name="vat"/>
                                 <span>Yes, I’m</span>
                             </label>
                         </div>
-                        <div className="col-sm-6 d-flex justify-content-center">
-                            <label>
+                        <div className="col-md-6 col-xs-6 py-md-1">
+                        <label className="d-flex justify-content-center">
                             <input type="radio" value="0" checked = {vat == 0} onChange={e=>handleClick(e)} name="vat"/>
                                 <span>Nope!</span>
                             </label>

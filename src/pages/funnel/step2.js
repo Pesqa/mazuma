@@ -39,7 +39,7 @@ const Step2 = ({step, business, company, dispatch}) => {
                 </div>
             </div>    
             <div className="row d-flex justify-content-center">
-                <div className="col-md-5 col-sm-9 col-xs-12">
+                <div className="col-md-5 col-sm-9 col-xs-10">
                     <div className="row">
                     <div className="col-sm-12 mb-3">
                         <input

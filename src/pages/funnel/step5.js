@@ -107,21 +107,21 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           <input type="hidden" name="quote_price" value={quoteprice}/>
             
           <div className="row customradiobtn">
-                <div className="col-sm-6 d-flex justify-content-center">
-                      <label>
+                <div className="col-md-6 col-xs-6 py-md-1">
+                      <label className="d-flex justify-content-center">
                       <input type="radio" value="1" checked = {payroll == 1} onChange={e=>handleClick(e)} name="payroll"/>
                           <span>Yes, I’m</span>
                       </label>
                 </div>
-                <div className="col-sm-6 d-flex justify-content-center">
-                      <label>
+                <div className="col-md-6 col-xs-6 py-md-1">
+                      <label className="d-flex justify-content-center">
                       <input type="radio" value="0" checked = {payroll == 0} onChange={e=>handleClick(e)} name="payroll"/>
                           <span>No</span>
                       </label>
                 </div>                
               </div>
               {btnstatus &&  payroll == 1 && (
-                  <div className="row d-flex justify-content-center mt-3">
+                  <div className="row d-flex justify-content-center mt-md-3 mt-sm-1">
                   <div className="col-md-8 text-center col-sm-12">
                    <h3 className="display-6 mb-1 w-100">How many payslips?</h3> 
                   </div>

@@ -138,7 +138,13 @@ footer a{ text-decoration: none;}
     padding-right: 0.75rem !important;
   }
 }
-
+.form-head{ 
+  overflow: hidden;
+  background-image:url(../assets/images/form-head-bg3.png) !important;
+  background-size: 100% auto;
+  background-repeat:repeat-x !important;
+  background-position: center center;
+}
 
 @media only screen and (min-width:300px) and (max-width:767px){
 .container-sm, .container {
@@ -150,10 +156,14 @@ footer a{ text-decoration: none;}
   background-position:top center;
   background-repeat:no-repeat;
   background-size:cover;}
+  .round-block{ width:100px; height: 100px;  }
+  .form-head{ height: 100px;}
   .form-sub-heading{ line-height: 2.7rem !important; font-size: 2.3rem !important;}
 }
 @media (max-width: 767px) {
-  .form-sub-heading{ line-height: 1.8rem !important; font-size: 1.8rem !important;}
+  .round-block{ width:75px; height: 75px;  }
+  .form-head{ height: 75px;}
+  .form-sub-heading{ line-height: 1.8rem !important; font-size: 1.6rem !important;}
   .col-md-8.col-sm-10 {
     flex: 0 0 auto !important;
     width: 83.33333333%;
@@ -212,6 +222,11 @@ footer a{ text-decoration: none;}
   }
   
   .my-account-link{ visibility: hidden; height:0px;}
+}
+@media (max-width: 440px) {
+  .customradiobtn.first-level{ display: flex !important; flex-direction:column;}
+  .customradiobtn.first-level .col-md-6.col-xs-6{width:190px !important; max-width: 100% !important; float:none; margin:auto;}
+  .customradiobtn .col-md-6.col-xs-6{ padding-left:5px !important; padding-right: 5px !important;}
 }
 .pr-10, .px-10 {
 	padding-right: 1.5875rem !important;
@@ -280,14 +295,8 @@ footer a{ text-decoration: none;}
 	border-radius: 0.65rem !important;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 8px 0px, rgba(0, 0, 0, 0.16) 0px 31px 30px -18px;
 }
-.round-block{ width:100px; height: 100px;  }
-.form-head{ height: 100px;
-  overflow: hidden;
-  background-image:url(../assets/images/form-head-bg3.png) !important;
-  background-size: 100% auto;
-  background-repeat:repeat-x !important;
-  background-position: center center;
-}
+
+
 
 
 .customradiobtn label {

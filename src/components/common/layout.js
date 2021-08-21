@@ -81,12 +81,9 @@ const Layout = ({ page, children }) => {
   }, []);
   return (  
     <div id="outer" className={ page === 'home' ? 'home' : 'default'} >
-      { page === 'home' ?
-      <HomeMenuStyles />
-      :
-      <MenuStyles />
-      }
-      
+      { page === 'home' && (
+        <>
+        <HomeMenuStyles /> 
         <SwipeLayer {...handlers} />
         <SideBar
           isOpen={isOpen}
@@ -94,7 +91,12 @@ const Layout = ({ page, children }) => {
           pageWrapId={"inner-wrap"}
           outerContainerId={"outer"}
           page={page}
-        />   
+        />  
+        </>
+      )
+      }
+      
+         
     { page === 'home' ?
     <HomeHeader logoImg={HeaderLogo} isSticky={isSticky}/>  
     :

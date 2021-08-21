@@ -39,26 +39,26 @@ const Funnel = ({step, business, dispatch}) => {
           </div>  
           <div className="row d-flex justify-content-center">
               <div className="col-lg-6 col-md-7 col-sm-9 col-xs-12">
-                <div className="row customradiobtn">
-                  <div className="col-md-6 col-xs-6 py-1">
+                <div className="row customradiobtn first-level">
+                  <div className="col-md-6 col-xs-6 py-md-1">
                     <label>
                     <input type="radio" value="Sole Trader" onChange={e=>handleClick(e)} name="business"/>
                       <span>Sole Trader</span>
                     </label>
                   </div>
-                  <div className="col-md-6 col-xs-6 py-1">
+                  <div className="col-md-6 col-xs-6 py-md-1">
                     <label>
                     <input type="radio" value="Ltd Company" onChange={e=>handleClick(e)} name="business"/>
                       <span>Ltd Company</span>
                     </label>
                   </div>
-                  <div className="col-md-6 col-xs-6 py-1">
+                  <div className="col-md-6 col-xs-6 py-md-1">
                   <label>
                   <input type="radio" value="Partnership" onChange={e=>handleClick(e)} name="business"/>
                       <span>Partnership</span>
                     </label>
                   </div>
-                  <div className="col-md-6 col-xs-6 py-1">
+                  <div className="col-md-6 col-xs-6 py-md-1">
                     <label>
                     <input type="radio" value="LLP" onChange={e=>handleClick(e)} name="business"/>
                         <span>LLP</span>
@@ -66,7 +66,7 @@ const Funnel = ({step, business, dispatch}) => {
                    
                   </div>
                   <div className="col-sm-12 py-1 d-flex justify-content-center align-items-center">
-                  {btnstatus && <button onClick={handleSubmit} className="my-4 py-2 px-4 btn btn-primary text-uppercase fs-6 fw-bolder text">Next</button>}
+                  {btnstatus && <button onClick={handleSubmit} className="my-4 py-2 px-5 btn btn-primary text-uppercase fs-6 fw-bolder text">Next</button>}
                   </div>
                 </div>                
               </div>

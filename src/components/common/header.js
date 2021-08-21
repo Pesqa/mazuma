@@ -6,13 +6,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const Header = ({ logoImg, isSticky }) => {  
   return(
     <header
-    className= "site-header px-md-3 py-md-3 px-sm-3 py-sm-3 position-sticky scrolled bordered"
+    className= "site-header px-md-3 py-md-1 px-sm-2 py-sm-2 position-sticky scrolled bordered"
     >
       <div className="container-fluid">        
         <div className="row">          
           <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div
-            className="sticky logo d-flex justify-content-start ps-md-5 ps-sm-4 "
+            className="sticky logo d-flex justify-content-start ps-md-5"
             >
                 <Link to="/">
                     <GatsbyImage
