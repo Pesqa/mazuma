@@ -1,16 +1,17 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react";
+
 
 import Layout from "../components/common/layout"
 import Seo from "../components/seo"
+import Hero2 from "../components/hero2"
 
-const SecondPage = () => (
+const SecondPage = () => {
+  return(
   <Layout>
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Hero2/>    
   </Layout>
-)
+)}
 
 export default SecondPage

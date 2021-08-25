@@ -31,6 +31,7 @@ const Testimonials = () => {
             {
               breakpoint: 767,
               settings: {
+                centerPadding: "5px",
                 slidesToShow: 1,
                 slidesToScroll: 1
               }
@@ -41,7 +42,7 @@ const Testimonials = () => {
         <div className="pt-md-2 pt-sm-2">
             <Slider {...settings}>
                 <div>
-                    <div className="testimonial-item shadow d-flex flex-column bg-white rounded-3 mx-md-3 p-md-3 p-sm-3 m-md-5 m-sm-5">                        
+                    <div className="testimonial-item shadow d-flex flex-column bg-white rounded-3 mx-md-3 p-md-3 m-md-5 m-sm-5 p-sm-3 ">                        
                         <div className="w-100 d-flex justify-content-start flex-row align-items-center">
                             <div className="bg-white circle-55">
                                 <StaticImage src="../assets/images/author.png" alt=""/>

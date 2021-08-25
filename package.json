@@ -21,6 +21,7 @@
     "gatsby-plugin-webfonts": "^2.1.1",
     "gatsby-source-filesystem": "^3.11.0",
     "gatsby-transformer-sharp": "^3.11.0",
+    "lottie-web": "^5.7.13",
     "netlify-plugin-gatsby-cache": "^0.3.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

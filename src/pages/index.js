@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/common/layout"
 import Seo from "../components/seo"
-import Hero from "../components/hero"
+import Hero2 from "../components/hero2"
 import HappyClients from "../components/happyClients"
 
 const IndexPage = () => {
@@ -14,13 +14,13 @@ const IndexPage = () => {
   return (
   <Layout page="home">
     <Seo title="Home" />
-    <Hero/>    
+    <Hero2/>    
     <div className="d-flex justify-content-center bg-light">
       <div className="container">
         <StaticImage src="../assets/images/clients-img.png" alt="" className="d-md-block d-none"/>
       </div>
     </div>
-    <HappyClients/>
+    <HappyClients />
     <div className="pt-md-5 mt-md-5 pt-sm-5 mt-sm-5">
       <div className="container">
         <div className="row justify-content-center text-center">
