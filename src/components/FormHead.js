@@ -1,9 +1,8 @@
-import React, { useState } from "react"
-import styled from 'styled-components'
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { connect } from 'react-redux';
-import FHeadImg from "../assets/images/form-head-bg2.png"
-import ArinaPic from "../assets/images/arina-pic.png"
+// import FHeadImg from "../assets/images/form-head-bg2.png"
+// import ArinaPic from "../assets/images/arina-pic.png"
 const FormHead = ({step, dispatch }) => {
     const handleSubmitBack = () => {
       dispatch({
@@ -32,9 +31,6 @@ const FormHead = ({step, dispatch }) => {
           </div>
     )
 }
-const HeadForm = styled.div`
-  background-image: url(${props => props.img}) !important;
-`
 const mapStateToProps = state => {
   return {
       step: state.app.step

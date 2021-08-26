@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
 import FormHead from '../../components/FormHead'

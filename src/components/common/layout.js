@@ -7,7 +7,6 @@ import { useSwipeable } from "react-swipeable";
 import SideBar from "../common/SideMenu"
 
 import { HomeMenuStyles } from "../../layout/HomeMenuStyles"
-import { MenuStyles } from "../../layout/MenuStyles"
 
 
 
@@ -23,13 +22,8 @@ const Layout = ({ page, children }) => {
   });
   const [isSticky, setSticky] = useState(false);
   const ref = useRef(null);
-  const { site, HeaderLogo, FooterLogo, appstoreImg, playstoreImg } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+  const { HeaderLogo, FooterLogo, appstoreImg, playstoreImg } = useStaticQuery(graphql`
+    query SiteTitleQuery {      
       HeaderLogo: file(relativePath: {eq: "logo.png"}) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 143)

@@ -79,7 +79,8 @@ footer a{ text-decoration: none;}
 .play-store:hover{background-color: rgba(255, 255, 255, 0.05)}
 .footer-social svg{ fill:rgba(255, 255, 255, 0.5) !important; width: calc(1.675rem + 0.3vw);}
 @media (min-width: 992px) {
-  
+  .animation-left{margin-top: -5rem !important;}
+  .animation-right{margin-top: -8rem !important;}
   .testimonials-up{ padding-bottom: 190px;}
   .testimonials-container{ margin-top: -240px;}
   .home .bm-menu-wrap{ display: none;}
@@ -145,7 +146,15 @@ footer a{ text-decoration: none;}
   background-repeat:repeat-x !important;
   background-position: center center;
 }
-
+@media only screen and (min-width:768px) and (max-width:991px){
+  .animation-block .display-4{
+    font-size: calc(0.875rem + 2vw);
+      font-weight: 700;
+      line-height: 1.2;
+  }
+  .animation-left{margin-top: -4rem !important;}
+  .animation-right{margin-top: -7rem !important;}
+}
 @media only screen and (min-width:300px) and (max-width:767px){
 .container-sm, .container {
     max-width: 100% !important;
@@ -169,7 +178,13 @@ footer a{ text-decoration: none;}
     transform: translate(-50%, -50%) !important;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+ 
+  .animation-mid-block.col-sm-12{
+    max-width: 600px;
+    z-index: 99 !important;    
+  }
+  .animation-right{ margin-top: -9rem !important; width:400px !important; z-index: 0 !important;}
   .round-block{ width:75px; height: 75px;  }
   .form-head{ height: 75px;}
   .form-sub-heading{ line-height: 1.8rem !important; font-size: 1.6rem !important;}
@@ -203,6 +218,24 @@ footer a{ text-decoration: none;}
   }
 }
 @media (max-width: 575px) {
+  .animation-mid-block .display-4 {
+      font-size: calc(1rem + 2vw);
+      line-height: 1.5;
+  }
+  .animation-mid-block.col-sm-12{
+    max-width: 100%;
+    padding-left:1rem !important;
+    padding-right: 1rem !important;
+    z-index: 99 !important;    
+  }
+  .animation-right{
+    margin-top: -6rem !important;
+    width:250px !important;
+    z-index: 0;
+  }
+  .justify-content-sm-center {
+      justify-content: center !important;
+  }
   .d-sm-none {
       display: none !important;
   }
