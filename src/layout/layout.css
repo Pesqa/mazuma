@@ -13,8 +13,16 @@ body {
   font-family: "Lato", sans-serif;
   color: rgb(74, 74, 74) !important; 
 }
+.border2{ border:2px solid red;}
+.border3{ border:2px solid blue;}
 .text-center {
 	text-align: center !important;
+}
+.renters-block{
+  background-image: url('../assets/images/renters-block-bg.png');
+  background-repeat: no-repeat;
+  background-size:100% auto;
+  padding-bottom: 10rem;
 }
 p, span, a, li, li a,
 h2, h3, h4, h5, h6{font-family: 'Lato', sans-serif !important;}
@@ -38,15 +46,6 @@ a{ text-decoration: none;}
 footer .nav-link{
   padding: 0.3rem 0rem;
 }
-/* .bm-burger-button{
-  top:2px;
-  left:2px;
-  border:2px solid red; width:40px; height: 40px;
-}
-.bm-burger-button button{
-  border:2px solid blue; width:40px !important; height: 40px !important; 
-}
-#react-burger-menu-btn span{border:2px solid red;} */
 #page-wrap{ display: none;}
 .site-header{background-color: #fff;transition: all .2s ease-in-out; padding:0px !important; margin:0px !important;}
 .site-header.bordered{border-bottom: 1px solid rgb(218, 218, 218);transition: all .2s ease-in-out;}
@@ -78,6 +77,12 @@ footer a{ text-decoration: none;}
 .play-store{ width:150px; float: left;border-radius: 5px;border: 1px solid rgb(74, 74, 74); padding: 15px; cursor: pointer;}
 .play-store:hover{background-color: rgba(255, 255, 255, 0.05)}
 .footer-social svg{ fill:rgba(255, 255, 255, 0.5) !important; width: calc(1.675rem + 0.3vw);}
+@media (min-width: 1200px)
+{
+h1.display-4 {
+    font-size: 2.65rem !important;
+}
+}
 @media (min-width: 992px) {
   .animation-left{margin-top: -5rem !important;}
   .animation-right{margin-top: -8rem !important;}
@@ -89,6 +94,18 @@ footer a{ text-decoration: none;}
   }
   .pt-lg-20, .py-lg-20 {
     padding-top: 5.3125rem !important;
+  }  
+  .top-price-btn{ display: none;
+    transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+    transform: translateY(-100px);
+  }
+  .scrolled .top-price-btn{
+    display: block;
+    transform: translateY(0px);
+  }
+ 
+  .logo img{
+    filter: grayscale(100%);
   }
   .normal.logo{
     margin-top:4.225rem !important;
@@ -102,6 +119,9 @@ footer a{ text-decoration: none;}
     font-size: 3.625rem;
     line-height: 1.10344;
   }
+  h1.display-4 {
+    font-size: 2.35rem !important;
+  } 
   }
   @media (max-width: 991px) {
     
@@ -138,6 +158,7 @@ footer a{ text-decoration: none;}
   .pr-lg-5, .px-lg-5 {
     padding-right: 0.75rem !important;
   }
+
 }
 .form-head{ 
   overflow: hidden;
@@ -148,7 +169,7 @@ footer a{ text-decoration: none;}
 }
 @media only screen and (min-width:768px) and (max-width:991px){
   .animation-block .display-4{
-    font-size: calc(0.875rem + 2vw);
+    font-size: calc(0.775rem + 1.2vw);
       font-weight: 700;
       line-height: 1.2;
   }
@@ -177,6 +198,7 @@ footer a{ text-decoration: none;}
     left:50%;
     transform: translate(-50%, -50%) !important;
   }
+
 }
 @media (max-width: 768px) {
  
@@ -277,8 +299,6 @@ footer a{ text-decoration: none;}
   .me-md-4{
     margin-right: 1.5rem !important;
   }
-  
-  .my-account-link{ visibility: hidden; height:0px;}
 }
 @media (max-width: 440px) {
   .customradiobtn label span {

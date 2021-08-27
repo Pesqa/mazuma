@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const HomeHeader = ({ logoImg, isSticky }) => {  
   return(
     <header
-    className={isSticky ? "site-header px-md-3 py-md-3 px-sm-3 py-sm-3 position-sticky scrolled bordered" : "site-header px-md-3 py-md-3 px-sm-3 py-sm-3 position-sticky scrolled"}
+    className={isSticky ? "site-header px-md-3 py-md-3 px-sm-3 py-sm-3 position-sticky scrolled bordered" : "site-header px-md-3 py-md-3 px-sm-3 py-sm-3 position-sticky"}
     >
       <div className="container-fluid">        
         <div className="row">
@@ -39,8 +39,8 @@ const HomeHeader = ({ logoImg, isSticky }) => {
                 </Link>
             </div>
           </div>
-          <div className="my-account-link col-lg-4 col-md-3 col-sm-3 p-0 m-0 align-items-start float-right d-flex justify-content-end">
-            <a className="nav-link text-dark w-auto" href="#">My Account</a>
+          <div className=" col-lg-4 col-md-3 col-sm-3 p-0 m-0 align-items-start float-right d-flex justify-content-end">
+          <button type="button" className="top-price-btn btn-primary fw-bold shadow rounded-sm shadow-4 text-uppercase">Check Our Pricing</button>
           </div>
         </div>
       </div>

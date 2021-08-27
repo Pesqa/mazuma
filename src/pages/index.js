@@ -20,27 +20,29 @@ const IndexPage = () => {
       </div>
     </div>
     <HappyClients />
-    <div className="pt-md-5 mt-md-5 pt-sm-5 mt-sm-5">
-      <div className="container">
+    <div className="renters-block pt-md-5 mt-md-5 pt-sm-5 mt-sm-5">
+      <div className="container pb-5 mb-5">
         <div className="row justify-content-center text-center">
           <div className="col-xl-6 col-lg-6 col-md-8">
-            <h2 className="display-5 mb-6 w-100">Renters insurance starting from 4 € a month</h2>
+            <h2 className="display-5 mb-6 w-100">Business accounting from <span>&#163;</span>28 a month</h2>
             <p className="fs-6 mb-0">100% digital. No paperwork. Sign up in seconds.</p>
+            <button type="button" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing</button>
           </div>
         </div>
+        
       </div>
     </div>
-    <div class="w-100"><StaticImage src="../assets/images/living-room.jpg" className="w-100"/></div>
+    {/* <div class="w-100"><StaticImage src="../assets/images/living-room.jpg" className="w-100"/></div> */}
     
     <div className="pt-md-5 pt-sm-4 bg-light">
       <div className="container mt-md-5 mt-sm-4">
       <div className="row d-flex justify-content-center pb-md-5 pm-sm-3">
           <div className="col-xl-7 col-lg-6 col-md-6 col-sm-9 text-center">
-            <h2 className="display-5 mb-6 w-100">Instant Everything</h2>
-            <p className="font-size-6 text-dark">Maya, our charming artificial intelligence bot, will craft the perfect coverage for you. It couldn't be easier, or faster.</p>
+            <h2 className="display-5 mb-6 w-100">Accounting. Done. Right</h2>
+            <p className="font-size-6 text-dark">Our Mazume team of professional chartered accountants will manage all your accounting needs. It couldn't be easier or simpler</p>
             <div className="video-pop mb-lg-25 mb-10 d-flex justify-content-center">            
               <a onClick={openModal} className="text-bg-info fs-6 text-decoration-none">
-              <svg viewBox="0 0 1200 1200"><path d="M 600,1200 C 268.65,1200 0,931.35 0,600 0,268.65 268.65,0 600,0 c 331.35,0 600,268.65 600,600 0,331.35 -268.65,600 -600,600 z M 450,300.45 450,899.55 900,600 450,300.45 z" id="path16995" /></svg>See the Lemonade App in action</a>
+              <svg viewBox="0 0 1200 1200"><path d="M 600,1200 C 268.65,1200 0,931.35 0,600 0,268.65 268.65,0 600,0 c 331.35,0 600,268.65 600,600 0,331.35 -268.65,600 -600,600 z M 450,300.45 450,899.55 900,600 450,300.45 z" id="path16995" /></svg>See the Mazuma App works</a>
             </div>
           </div> 
         </div>    
@@ -55,29 +57,26 @@ const IndexPage = () => {
       <div className="container my-lg-4 my-md-4 my-sm-4">
         <div className="row justify-content-center text-center">
           <div className="col-xl-8 col-lg-7 col-md-9">
-            <h2 className="display-5 mb-lg-5 mb-md-5 w-100">Already insured?
-              Switch to Lemonade instantly</h2>
+            <h2 className="display-5 mb-lg-5 mb-md-5 w-100">Already have an accountant? Switch to Mazuma</h2>
           </div>
         </div>
         <div className="row justify-content-center text-center">
-          <div className="col-lg-4 col-xs-12 d-flex flex-column justify-content-center text-center">
-            <div><StaticImage src="../assets/images/policy_1.png" className="w-auto"/></div>
-            <h3 className="display-6 my-md-3 py-md-3">Get your<br /> Lemonade policy</h3>
+          <div className="col-lg-4 col-xs-12 px-5 d-flex flex-column justify-content-center text-center">
+            <div><StaticImage src="../assets/images/get-started.png" className="w-auto"/></div>
+            <h3 className="display-6 my-md-3 py-md-3 px-2">Get started with Mazume</h3>
           </div>
-          <div className="col-lg-4 col-xs-12 d-flex flex-column justify-content-center text-center">
-            <div><StaticImage src="../assets/images/policy_2.png" className="w-auto"/></div>
-            <h3 className="display-6 my-md-3 py-md-3"> Give us your old<br />
-              policy details</h3>
+          <div className="col-lg-4 col-xs-12 px-5 d-flex flex-column justify-content-center text-center">
+            <div><StaticImage src="../assets/images/paperwork.png" className="w-auto"/></div>
+            <h3 className="display-6 my-md-3 py-md-3 px-2">Send us your paperwork and receipts</h3>
           </div>
-          <div className="col-lg-4 col-xs-12 d-flex flex-column justify-content-center text-center">
-            <div><StaticImage src="../assets/images/policy_3.png" className="w-auto"/></div>
-            <h3 className="display-6 my-md-3 py-md-3"> We'll handle all<br />
-              the paperwork</h3>
+          <div className="col-lg-4 col-xs-12 px-5 d-flex flex-column justify-content-center text-center">
+            <div><StaticImage src="../assets/images/handle-everything.png" className="w-auto"/></div>
+            <h3 className="display-6 my-md-3 py-md-3 px-2"> We'll handle everything for you</h3>
           </div>          
         </div>
         <div className="row">
           <div className="d-flex justify-content-center align-items-center">
-            <button type="button" className="btn btn-bg-info text-light fw-bold text-uppercase fs-6 shadow-lg text lh-lg py-md-2 px-md-3 py-sm-2 px-sm-3">Check Prices And Switches</button>
+          <button type="button" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing and Change</button>
           </div>        
         </div>
       </div>
@@ -86,20 +85,13 @@ const IndexPage = () => {
       <div className="container mt-md-4 my-sm-4">
         <div className="row justify-content-center text-center">
           <div className="col-xl-9 col-lg-9 col-md-7">
-          <h2 className="display-5 mb-md-2 mb-sm-2 w-100">How Lemonade Works</h2>
-          <p className="fs-5 text-dark">Lemonade reverses the traditional insurance model. We treat the premiums you pay as if it's your money, not ours. With Lemonade, everything becomes simple and transparent. We take a flat fee, pay claims super fast, and what's left to causes you care about.*</p>
+          <h2 className="display-5 mb-md-4 mb-sm-3 w-100">How Mazume Works</h2>
+          <p>As your business grows, it becomes harder to stay on top of your finances. Receipts pile up, invoices aren't sent out, and timelines slip. The system you've used for four clients is'not working for 40, and it won't work for 400. You tried Excel, but you can't run your business with a rat's nest of spreadsheets.</p>
+          <p>You need a proper system managed by professional accountants to stay organized, scalable, and focused. You need someone that can handle the basics so you have the time to handle the big picture.</p>
+          <p>That's why Mazume exists. We manage all the essentials - receipts, invoices, payments - so you dont have to. We even offer top-quality accounting advice, all in one place.</p>
+          <p>let us sweat the small stuff so you can focus on your business. Whether you want to expand or maintain your business or simply keep your sideline running smoothly, Mazuma with take care of the details while you take care of business.</p>
           </div>
-          <div className="col-xl-9 col-lg-12 col-md-9 py-md-5 py-sm-4">
-            <StaticImage src="../assets/images/pizza.jpg" className="d-md-block d-none"/>
-            <div className="work_blk d-none"> <img className="mb-4" src="images/pizza-1.png" alt=""/>
-              <p className="mb-15">A flat fee to run everything</p>
-              <img className="mb-4" src="images/pizza-2.png" alt=""/>
-              <p className="mb-15">We pay claims <b>super fast</b></p>
-              <img className="mb-4" src="images/pizza-3.png" alt=""/>
-              <p className="mb-lg-15 mb-10">If there's money leftover, we <b>give it back to causes</b></p>
-            </div>
-            <p className="fs-6 text-dark pt-md-5">* Subject to board discretion and the company meeting certain financial standards. <a href="#">Read more here</a></p>
-          </div>
+          
         </div>
       </div>
     </div>
