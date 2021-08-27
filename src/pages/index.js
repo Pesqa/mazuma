@@ -4,9 +4,11 @@ import Layout from "../components/common/layout"
 import Seo from "../components/seo"
 import Hero2 from "../components/hero2"
 import HappyClients from "../components/happyClients"
+import ModalBox from '../components/ModalBox'
 
 const IndexPage = () => {
   const [isOpen, setOpen] = useState(false)  
+  const [modalShow, setModalShow] = React.useState(false);
   const openModal = ()=>{
     setOpen(true)
   }
@@ -42,7 +44,7 @@ const IndexPage = () => {
             <p className="font-size-6 text-dark">Our Mazume team of professional chartered accountants will manage all your accounting needs. It couldn't be easier or simpler</p>
             <div className="video-pop mb-lg-25 mb-10 d-flex justify-content-center">            
               <a onClick={openModal} className="text-bg-info fs-6 text-decoration-none">
-              <svg viewBox="0 0 1200 1200"><path d="M 600,1200 C 268.65,1200 0,931.35 0,600 0,268.65 268.65,0 600,0 c 331.35,0 600,268.65 600,600 0,331.35 -268.65,600 -600,600 z M 450,300.45 450,899.55 900,600 450,300.45 z" id="path16995" /></svg>See the Mazuma App works</a>
+              <svg viewBox="0 0 1200 1200"><path d="M 600,1200 C 268.65,1200 0,931.35 0,600 0,268.65 268.65,0 600,0 c 331.35,0 600,268.65 600,600 0,331.35 -268.65,600 -600,600 z M 450,300.45 450,899.55 900,600 450,300.45 z" id="path16995" /></svg><span onClick={() => setModalShow(true)}>See the Mazuma App works</span></a>
             </div>
           </div> 
         </div>    
@@ -63,7 +65,7 @@ const IndexPage = () => {
         <div className="row justify-content-center text-center">
           <div className="col-lg-4 col-xs-12 px-5 d-flex flex-column justify-content-center text-center">
             <div><StaticImage src="../assets/images/get-started.png" className="w-auto"/></div>
-            <h3 className="display-6 my-md-3 py-md-3 px-2">Get started with Mazume</h3>
+            <h3 className="display-6 my-md-3 py-md-3 px-2">Get started with Mazuma</h3>
           </div>
           <div className="col-lg-4 col-xs-12 px-5 d-flex flex-column justify-content-center text-center">
             <div><StaticImage src="../assets/images/paperwork.png" className="w-auto"/></div>
@@ -127,7 +129,10 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-
+    <ModalBox
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
   </Layout>
 )
 }
