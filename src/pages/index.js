@@ -48,9 +48,9 @@ const IndexPage = () => {
             </div>
           </div> 
         </div>    
-        <div className="row d-flex justify-content-center pt-md-5 pt-sm-3">     
-          <div className="col-xl-5 col-lg-7 col-md-9">
-            <StaticImage src="../assets/images/mob_app.png"/>
+        <div className="row d-flex justify-content-center pt-md-4 pt-sm-3">     
+          <div className="col-xl-10 col-lg-10 col-md-9 col-sm-12">
+            <StaticImage src="../assets/images/phone-sec.png"/>
           </div>
         </div>
       </div>

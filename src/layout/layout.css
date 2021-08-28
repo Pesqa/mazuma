@@ -198,10 +198,10 @@ h1.display-4 {
     left:50%;
     transform: translate(-50%, -50%) !important;
   }
-
+  .site-header button i{ font-style: normal;}
 }
 @media (max-width: 768px) {
- 
+  .site-header button i{ display: none;}
   .animation-mid-block.col-sm-12{
     max-width: 600px;
     z-index: 99 !important;    
@@ -240,6 +240,17 @@ h1.display-4 {
   }
 }
 @media (max-width: 575px) {
+  .col-sm-3 {
+    flex: 0 0 auto;
+    width: 25% !important;
+  }
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50% !important;
+  }
+  .d-sm-block {
+      display: block !important;
+  }
   .animation-mid-block .display-4 {
       font-size: calc(1rem + 2vw);
       line-height: 1.5;
