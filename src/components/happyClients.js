@@ -9,9 +9,8 @@ const HappyClients = () => {
                 <div className="d-flex flex-column justify-content-center">
                     <div className="row d-flex justify-content-center text-center mb-3">
                         <div className="col-xl-8 col-lg-7 col-md-9">
-                            <h2 className="display-5 mb-md-1 mb-sm-1 w-100">Over 20,000 happy customers!</h2>
-                            <p className="fs-5 text text-dark lh-base">Mazume has earned 4.95 stars in reviews.co.uk, and 4.5 /5 on Trustpilot<br />
-                            and we have won numerous business related awards</p>                            
+                            <h2 className="display-5 mb-md-1 mb-sm-1 w-100">Over 50,000 happy customers!</h2>
+                            <p className="fs-5 text text-dark lh-base">Want to know what a company is really like to work with? Check out their customer reviews. Mazuma has earned 4.95 stars on reviews.co.uk and 4.5 /5 on Trustpilot - and we’ve won numerous business-related awards, too. We truly care about what we do.</p>                            
                         </div>
                     </div> 
                     <div className="row d-flex justify-content-center text-center">
@@ -24,7 +23,7 @@ const HappyClients = () => {
                         </div>  
                     </div>
                     <div className="row d-flex justify-content-center text-center">
-                        <p className="font-size-5 mt-4 mb-5"> Read what our customers are saying about Mazuma </p>
+                        <p className="font-size-5 mt-4 mb-5">Read what our customers are saying about Mazuma:</p>
                     </div>
                 </div>
             </div>                     

@@ -37,7 +37,7 @@ const HomeHeader = ({ logoImg, isSticky }) => {
                       width={143} height={27}
                     />
                 </Link>
-                <Link to="/get-a-quote/1" className="text-decoration-none fw-normal header-top-btn position-absolute position-absolute top-0 end-0 me-2 mt-2 p-2 px-lg-4 px-md-2 px-sm-2 top-price-btn btn-primary fw-bold shadow rounded-sm shadow-4 text-uppercase text-decoration-none"><i className="fw-normal">Check Our </i>Pricing</Link>
+                <Link to="/get-a-quote/1" className="text-decoration-none fw-normal header-top-btn position-absolute position-absolute top-0 end-0 me-2 mt-2 p-2 px-lg-4 px-md-2 px-sm-2 top-price-btn btn-primary fw-bold shadow rounded-sm shadow-4 text-uppercase text-decoration-none"><i className="fw-normal fw-bold">Check Our </i>Pricing</Link>
             </div>
           </div>
         </div>

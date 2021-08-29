@@ -41,12 +41,10 @@ const Hero2 = () => {
                     <div className="w-100 mt-md-3 pt-3">
                         <div className="text-center mb-xs-5">
                         <h1 className="display-4 lh-1 mb-1 text-secondary-dark letter-spacing-normal">We Take Your Accounting Matters Seriously</h1>
-                        <p className="fs-4 text mb-4 text-secondary-dark">So that you don't have to</p>
-                        <p className="fs-5 text fw-bold mb-0 text-secondary-dark">Instant Accounting, Great Prices, Big heart</p>
-                        <div className="btn-group d-inline-block mt-md-10 mb-3">
-                            <Link to="/get-a-quote/1" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing</Link>
-                            <p className="d-block mt-6 font-size-4 mb-0 text-dark letter-spacing-normal">Already got accountant? We'll help you switch</p>
-                        </div>
+                        <p className="w-100 fs-4 text mb-4 text-secondary-dark">So You Don't Have To</p>
+                        <p className="w-100 fs-5 text fw-bold mb-0 text-secondary-dark">Instant Accounting At A Price You Can Afford</p>
+                        <p className="w-100 mt-6 font-size-4 mb-0 text-dark letter-spacing-normal">Need to switch from an old accountant? It’s easy - we’ll help.</p>
+                        <p className="w-100 fs-5 text pt-4 pb-3 fw-bold text-secondary-dark">Click <Link to="/get-a-quote/1" className="text-bg-info text-decoration-none">here</Link> to get a free quote for our monthly accounting service. </p>
                         </div>
                     </div>
                 </div>

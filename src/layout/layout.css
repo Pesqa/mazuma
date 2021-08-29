@@ -330,12 +330,16 @@ h1.display-4 {
   .me-md-4{
     margin-right: 1.5rem !important;
   }
+  .header-top-btn i{
+    display: none !important;
+  }
 }
 @media (max-width: 480px) {
-  button.header-top-btn{
+  .header-top-btn{
     padding:0.2rem 0.4rem !important;
     margin:0.9rem 0.3rem !important;
     font-size: 13px !important;
+    border:2px solid red;
   }
 }
 @media (max-width: 440px) {
@@ -399,11 +403,10 @@ h1.display-4 {
   max-width: 100%;
 }
 .circle-55 {
-	max-width: 55px;
-	min-width: 55px;
-	max-height: 55px;
-	min-height: 55px;
-	border-radius: 500px;
+	max-width: 65px;
+	min-width: 65px;
+	max-height: 65px;
+	min-height: 65px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
