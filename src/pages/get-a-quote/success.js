@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Decrypt } from '../../utils/functions'
 import Layout from "../../components/common/layout"
 
-const Thankyou = (props) => {
+const Success = (props) => {
     const params = new URLSearchParams(props.location.search);
     const quoteprice = params.get("v");
     useEffect(() => {
@@ -12,7 +12,7 @@ const Thankyou = (props) => {
             props.dispatch({
                 type: 'RESET'
             });
-            navigate('/funnel');
+            navigate('/get-a-quote');
         }, 5000);
      });
 
@@ -46,4 +46,4 @@ const mapStateToProps = state => {
         quoteprice: state.app.quoteprice
     };
 };
-export default connect(mapStateToProps)(Thankyou);
+export default connect(mapStateToProps)(Success);

@@ -10,7 +10,7 @@ const Header = ({ logoImg, isSticky }) => {
     >
       <div className="container-fluid">        
         <div className="row">          
-          <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div className="col-sm-12 col-xs-12 text-center">
             <div
             className="sticky logo d-flex justify-content-start ps-md-5"
             >
@@ -23,9 +23,9 @@ const Header = ({ logoImg, isSticky }) => {
                 </Link>
             </div>
           </div>
-          <div className="my-account-link col-lg-6 col-md-6 col-sm-6 p-0 m-0 align-items-start float-right d-flex justify-content-end">
+          {/* <div className="my-account-link col-lg-6 col-md-6 col-sm-6 p-0 m-0 align-items-start float-right d-flex justify-content-end">
             <a className="nav-link text-dark w-auto" href="#">My Account</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

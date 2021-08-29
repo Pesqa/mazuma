@@ -7,7 +7,7 @@ import Layout from "../../components/common/layout"
 const Step3 = ({step, business, company, firstname, lastname, dispatch}) => {
     useEffect(() => {
         if(step<3){
-            navigate('/funnel/step2');
+            navigate('/get-a-quote/2');
         }
       }, [step]);
      const handleSubmit = () => {
@@ -15,7 +15,7 @@ const Step3 = ({step, business, company, firstname, lastname, dispatch}) => {
             type: 'NEXT_STEP',
             payload: 1,
         });
-        return navigate('/funnel/step4')
+        return navigate('/get-a-quote/4')
       }
     
       const handleChangeHanlder = (e) => {

@@ -11,12 +11,12 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
     const [equote, setEquote] = useState(0);
     useEffect(() => {
       if(step==1){
-        navigate('/funnel');
+        navigate('/get-a-quote/1');
       }
       else
       {
         if(step<5){
-          navigate('/funnel/step4');
+          navigate('/get-a-quote/4');
         }
       }      
     }, [step]); 
@@ -95,7 +95,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, payroll, pays
           </div>    
           <div className="row d-flex justify-content-center">
           <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">     
-          <form name="quoteform" method="POST" data-netlify="true" action={ `/funnel/thankyou?v=${quoteprice}` } onSubmit={submitHandler}>
+          <form name="quoteform" method="POST" data-netlify="true" action={ `/get-a-quote/success?v=${quoteprice}` } onSubmit={submitHandler}>
           <input type="hidden" name="form-name" value="quoteform"/>    
           <input type="hidden" name="name" value={firstname}/>
           <input type="hidden" name="lastname" value={lastname}/>                

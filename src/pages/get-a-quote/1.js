@@ -6,14 +6,14 @@ import FormHead from '../../components/FormHead'
 import Layout from "../../components/common/layout"
 
 
-const Funnel = ({step, business, dispatch}) => {
+const Step1 = ({step, business, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(false);
     const handleSubmit = () => {
         dispatch({
             type: 'NEXT_STEP',
             payload: 1,
         });
-        return navigate('/funnel/step2')
+        return navigate('/get-a-quote/2')
       }
     const handleClick = (e) => { 
         dispatch({
@@ -81,4 +81,4 @@ const mapStateToProps = state => {
         business: state.app.business
     };
 };
-export default connect(mapStateToProps)(Funnel);
+export default connect(mapStateToProps)(Step1);

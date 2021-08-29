@@ -75,7 +75,7 @@ const Layout = ({ page, children }) => {
   }, []);
   return (  
     <div id="outer" className={ page === 'home' ? 'home' : 'default'} >
-      { page === 'home' && (
+      {/* { page === 'home' && (
         <>
         <HomeMenuStyles /> 
         <SwipeLayer {...handlers} />
@@ -88,7 +88,7 @@ const Layout = ({ page, children }) => {
         />  
         </>
       )
-      }
+      } */}
       
          
     { page === 'home' ?

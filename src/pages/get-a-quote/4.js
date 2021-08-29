@@ -8,7 +8,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, dispatch}) =>
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
     useEffect(() => {
         if(step<4){
-            navigate('/funnel/step3');
+            navigate('/get-a-quote/3');
         }
       }, [step]);
     const handleSubmit = () => {
@@ -16,7 +16,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, dispatch}) =>
             type: 'NEXT_STEP',
             payload: 1,
         });
-        return navigate('/funnel/step5')
+        return navigate('/get-a-quote/5')
       }
     const handleClick = (e) => { 
         dispatch({

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/common/layout"
 import Seo from "../components/seo"
@@ -28,7 +29,7 @@ const IndexPage = () => {
           <div className="col-xl-6 col-lg-6 col-md-8">
             <h2 className="display-5 mb-6 w-100">Business accounting from <span>&#163;</span>28 a month</h2>
             <p className="fs-6 mb-0">100% digital. No paperwork. Sign up in seconds.</p>
-            <button type="button" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing</button>
+            <Link to="/get-a-quote/1" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing</Link>
           </div>
         </div>
         
@@ -78,7 +79,7 @@ const IndexPage = () => {
         </div>
         <div className="row">
           <div className="d-flex justify-content-center align-items-center">
-          <button type="button" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing and Change</button>
+          <Link to="/get-a-quote/1" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing and Change</Link>
           </div>        
         </div>
       </div>

@@ -13,6 +13,7 @@ body {
   font-family: "Lato", sans-serif;
   color: rgb(74, 74, 74) !important; 
 }
+.header-top-btn i{ font-style: normal !important;}
 .border2{ border:2px solid red;}
 .border3{ border:2px solid blue;}
 .text-center {
@@ -83,7 +84,7 @@ h1.display-4 {
     font-size: 2.65rem !important;
 }
 }
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   .animation-left{margin-top: -5rem !important;}
   .animation-right{margin-top: -8rem !important;}
   .testimonials-up{ padding-bottom: 190px;}
@@ -112,7 +113,9 @@ h1.display-4 {
     transition: all .2s ease-in-out;
   }
   .sticky.logo{
-    margin-top:0.55rem !important;
+    margin-top:0.8rem !important;
+    margin-bottom:0.8rem !important;
+    height:25px;
     transition: all .2s ease-in-out;
   }
   .font-size-11 {
@@ -124,7 +127,12 @@ h1.display-4 {
   } 
   }
   @media (max-width: 991px) {
-    
+    .sticky.logo{
+      margin-top:0.8rem !important;
+      margin-bottom:0.8rem !important;
+      height:27px;
+      transition: all .2s ease-in-out;
+    }
     .f-logo{ display: flex; justify-content: center; margin-bottom: 2.3125rem !important;}
     .normal.logo,.sticky.logo{
       margin-top:0.55rem !important;
@@ -198,9 +206,15 @@ h1.display-4 {
     left:50%;
     transform: translate(-50%, -50%) !important;
   }
-  .site-header button i{ font-style: normal;}
+  .site-header button i{ font-style: normal ;}
 }
 @media (max-width: 768px) {
+  .sticky.logo{
+    margin-top:0.8rem !important;
+    margin-bottom:0.8rem !important;
+    height:27px;
+    transition: all .2s ease-in-out;
+  }
   .site-header button i{ display: none;}
   .animation-mid-block.col-sm-12{
     max-width: 600px;
@@ -240,6 +254,12 @@ h1.display-4 {
   }
 }
 @media (max-width: 575px) {
+  .logo{
+    margin-top:1rem !important;
+    margin-bottom:1rem !important;
+    height:32px !important;
+    transition: all .2s ease-in-out;
+  }
   .col-sm-3 {
     flex: 0 0 auto;
     width: 25% !important;
@@ -309,6 +329,13 @@ h1.display-4 {
   }
   .me-md-4{
     margin-right: 1.5rem !important;
+  }
+}
+@media (max-width: 480px) {
+  button.header-top-btn{
+    padding:0.2rem 0.4rem !important;
+    margin:0.9rem 0.3rem !important;
+    font-size: 13px !important;
   }
 }
 @media (max-width: 440px) {
@@ -429,4 +456,21 @@ h1.display-4 {
 .modal-body iframe{
   padding:0px 0px 0px 0px !important;
   margin: 0px 0px -25px 0px !important;
+}
+.modal-dialog{ max-width: 700px !important;}
+.modal-dialog .container{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  
+  padding-top: 56.25%;
+}
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }

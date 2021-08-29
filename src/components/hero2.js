@@ -1,4 +1,5 @@
 import React, { createRef, useEffect } from "react";
+import { Link } from 'gatsby'
 import lottie from 'lottie-web';
 
 import animLeft from '../assets/animations/left-anim.json';
@@ -43,7 +44,7 @@ const Hero2 = () => {
                         <p className="fs-4 text mb-4 text-secondary-dark">So that you don't have to</p>
                         <p className="fs-5 text fw-bold mb-0 text-secondary-dark">Instant Accounting, Great Prices, Big heart</p>
                         <div className="btn-group d-inline-block mt-md-10 mb-3">
-                            <button type="button" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing</button>
+                            <Link to="/get-a-quote/1" className="btn btn-primary fw-bold shadow rounded-sm shadow-4 mt-4 mb-3 text-uppercase">Check Our Pricing</Link>
                             <p className="d-block mt-6 font-size-4 mb-0 text-dark letter-spacing-normal">Already got accountant? We'll help you switch</p>
                         </div>
                         </div>

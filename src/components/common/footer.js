@@ -27,21 +27,36 @@ const Footer = ({ logoImg, appstoreImg, playstoreImg }) => {
         }
     ]
   return(
-    <footer className="w-100 float-left bg-secondary pt-md-15 pb-md-25 pt-10 pb-15 px-sm-10">
+    <footer className="w-100 float-left bg-secondary py-md-15 pt-10 pb-15 px-sm-10">
         <div className="container">
             <div className="row">
-            <div className="col-lg-2 col-xs-12">
-                <div className="f-logo">
-                    <Link to="/">
-                        <GatsbyImage
-                            alt="Online Accountants from £28 a month | Mazuma Accountants"
-                            image={getImage(logoImg)} 
-                            width={118} height={118}
-                        />
-                    </Link>
+                <div className="col-lg-2 col-md-12 col-sm-12">
+                    <div className="f-logo">
+                        <Link to="/">
+                            <GatsbyImage
+                                alt="Online Accountants from £28 a month | Mazuma Accountants"
+                                image={getImage(logoImg)} 
+                                width={118} height={118}
+                            />
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            <div className="col-lg-2 col-sm-6 col-xs-12">
+                <div className="col-lg-10 col-md-12 col-sm-12">
+                    <div className="row">
+                        <div className="col-md-6 col-sm-12">
+                        <h4 className="text-white-50 font-weight-bold text-uppercase font-size-3 mb-6">Registered Address:</h4>
+                        <p className="text-white">Dragon House, Princes Way,<br/>
+                        Bridgend Industrial Estate,<br/>
+                        Bridgend,<br/>
+                        CF31 3AQ
+                        </p>
+                        </div>
+                        <div className="col-md-6 col-sm-12">
+                            <p className="text-white">© Mazuma GB Limited 2021 | Company Registration Number: 6662632 | VAT No: 938 6581 74</p>
+                        </div>
+                    </div>  
+                </div>
+            {/* <div className="col-lg-2 col-sm-6 col-xs-12">
                 <div className="f_links w-100 float-left mb-lg-0 mb-10">
                 <h4 className="text-white-50 font-weight-bold text-uppercase font-size-3 mb-6">Features</h4>
                 <ul className="list-unstyled">
@@ -50,8 +65,8 @@ const Footer = ({ logoImg, appstoreImg, playstoreImg }) => {
                     <li><a href="#" className="nav-link font-size-5 text-white">Policy 2.0</a></li>
                 </ul>
                 </div>
-            </div>
-            <div className="col-lg-2 col-sm-6 col-xs-12">
+            </div> */}
+            {/* <div className="col-lg-2 col-sm-6 col-xs-12">
                 <div className="f_links w-100 float-left mb-lg-0 mb-10">
                 <h4 className="text-white-50 font-weight-bold text-uppercase font-size-3 mb-6">resources</h4>
                 <ul className="list-unstyled">
@@ -59,8 +74,8 @@ const Footer = ({ logoImg, appstoreImg, playstoreImg }) => {
                     <li><a href="#" className="nav-link font-size-5 text-white">Where We're Live</a></li>
                 </ul>
                 </div>
-            </div>
-            <div className="col-lg-2 col-sm-6 col-xs-12">
+            </div> */}
+            {/* <div className="col-lg-2 col-sm-6 col-xs-12">
                 <div className="f_links w-100 float-left mb-lg-0 mb-10">
                 <h4 className="text-white-50 font-weight-bold text-uppercase font-size-3 mb-6">company</h4>
                 <ul className="list-unstyled">
@@ -69,8 +84,8 @@ const Footer = ({ logoImg, appstoreImg, playstoreImg }) => {
                     <li><a href="#" className="nav-link font-size-5 text-white">Terms of Service</a></li>
                 </ul>
                 </div>
-            </div>
-            <div className="col-lg-4 col-sm-6 col-xs-12">
+            </div> */}
+            {/* <div className="col-lg-4 col-sm-6 col-xs-12">
                 <div className="region w-100 float-left mb-10">
                 <h4 className="text-white-50 font-weight-bold text-uppercase font-size-3 mb-6">region</h4>
                 <div className="my-md-4 my-sm-4">
@@ -84,12 +99,6 @@ const Footer = ({ logoImg, appstoreImg, playstoreImg }) => {
                             <option>NETHERLANDS (ENGLISH)</option>
                         </select>
                     </div>
-                    {/* <ul className="list">
-                    <li data-value="france" className="option selected focus">France (English)</li>
-                    <li data-value="saab" className="option">France (Français)</li>
-                    <li data-value="opel" className="option">United States</li>
-                    <li data-value="audi" className="option">Germany (Deutsch)</li>
-                    </ul> */}
                 </div>
                 </div>
                 <div className="app_store w-100 float-left mb-6">
@@ -123,7 +132,7 @@ const Footer = ({ logoImg, appstoreImg, playstoreImg }) => {
                     ))}
                 </div>                    
                 </div>
-            </div>
+            </div> */}
             </div>
         </div>
         </footer>
