@@ -33,11 +33,11 @@ const Hero2 = () => {
   
     return(
       <div className="container-fluid m-md-0 px-0 pt-lg-5 overflow-hidden">
-        <div className="animation-block row d-flex justify-content-md-between justify-content-sm-center position-relative">
-            <div className="animation-left col-lg-3 col-md-4 pe-5 d-sm-none d-md-block">
+        <div className="border2 animation-block row d-flex justify-content-md-between justify-content-sm-center position-relative">
+            <div className="border2 col-lg-3 col-md-4 animation-left pe-5 d-sm-none d-md-block">
                 <span ref={animLeftContainer}></span>
             </div>
-                <div className="col-lg-6 col-md-4 col-sm-12 animation-mid-block col-sm-12 d-flex justify-content-center">
+                <div className="border3 col-lg-6 col-md-4 col-sm-12 animation-mid-block col-sm-12 d-flex justify-content-center">
                     <div className="w-100 mt-md-3 pt-3">
                         <div className="text-center mb-xs-5">
                         <h1 className="display-4 lh-1 mb-1 text-secondary-dark letter-spacing-normal">We Take Your Accounting Matters Seriously</h1>
@@ -51,7 +51,7 @@ const Hero2 = () => {
                         </div>
                     </div>
                 </div>
-            <div className="animation-right col-lg-3 col-md-4 col-sm-12 ps-0 p-md-0">
+            <div className="border2 col-lg-3 col-md-4 animation-right col-sm-12 ps-0 p-md-0">
                 <span ref={animRightContainer}></span>
             </div>
         </div>
