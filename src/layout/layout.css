@@ -217,10 +217,12 @@ h1.display-4 {
   }
   .site-header button i{ display: none;}
   .animation-mid-block.col-sm-12{
-    max-width: 600px;
+    /* max-width: 600px; */
     z-index: 99 !important;    
   }
-  .animation-right{ margin-top: -9rem !important; width:400px !important; z-index: 0 !important;}
+  .animation-right{ margin-top: -9rem !important;
+    /* width:400px !important; */
+    z-index: 0 !important;}
   .round-block{ width:75px; height: 75px;  }
   .form-head{ height: 75px;}
   .form-sub-heading{ line-height: 1.8rem !important; font-size: 1.6rem !important;}
