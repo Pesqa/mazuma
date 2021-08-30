@@ -19,21 +19,19 @@ const Logos = () => {
               }
           }
         `
-      ) 
-    console.log('Logos ', Logos)
+      )     
     return(
       <div className="d-flex justify-content-center bg-white">
         <div className="container d-flex flex-row justify-content-between">
-        {Logos.edges.map(({node}, index) => {
-            return(
-                <GatsbyImage
+          {Logos.edges.map(({node}, index) => {
+              return(
+                  <GatsbyImage
                       alt={node.imgalt}
                       image={getImage(node)} 
                       className="px-2"
-                />
-            )
-        })}  
-          
+                  />
+              )
+          })} 
         </div>
       </div>
   )}

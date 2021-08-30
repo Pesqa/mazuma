@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
-import { Decrypt } from '../../utils/functions'
 import Layout from "../../components/common/layout"
 
 const Success = (props) => {
@@ -12,7 +11,7 @@ const Success = (props) => {
             props.dispatch({
                 type: 'RESET'
             });
-            navigate('/get-a-quote');
+            navigate('https://calendly.com/mazumadvinen/30min');
         }, 5000);
      });
 
