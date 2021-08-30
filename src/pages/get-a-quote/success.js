@@ -12,7 +12,7 @@ const Success = (props) => {
                 type: 'RESET'
             });
             navigate('https://calendly.com/mazumadvinen/30min');
-        }, 5000);
+        }, 3000);
      });
 
      
