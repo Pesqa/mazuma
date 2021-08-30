@@ -11,7 +11,7 @@ const Testimonials = () => {
         {
             "img" : review1,
             "title" : "Excellent customer services",
-            "review" : "Excellent customer services. Extremely friendly and helpful. I have been using Mazuma since May 2013 and they are the best. Great accountancy and excellent prices, love the monthly accounts as it is so much easier to keep track of my income and expenses. I would highly recommend them. Five star"
+            "review" : "Excellent customer services. Extremely friendly and helpful. I have been using Mazuma since May 2013 and they are the best. Great accountancy and excellent prices, love the monthly accounts. I would highly recommend them. Five star"
         },
         {
             "img" : review2,
@@ -25,13 +25,13 @@ const Testimonials = () => {
         },
         {
             "img" : review4,
-            "title" : "Wouldn't dream of using anyone else",
-            "review" : "Wouldn't dream of using anyone else. Mazuma have been with us from the start of our business and their advice has been invaluable. Their customer service is second to none; like having good friends help out. Excellent all round service."
+            "title" : "Wouldn’t dream of using anyone else",
+            "review" : "Wouldn’t dream of using anyone else. Mazuma have been with us from the start of our business and their advice has been invaluable. Their customer service is second to none; like having good friends help out. Excellent all round service."
         },
         {
             "img" : review5,
             "title" : "Mazuma offers a great and reasonably priced service",
-            "review" : "In our third year with Mazuma. In the beginning, we had an easy onboarding process. Recently, things become much more efficient as they've created dedicated Mazuma contact. They will always get back to you with personalized answers to any questions. They send you a piece of monthly personalized business advice based on your invoices and bills. Would highly recommend!"
+            "review" : "In our third year with Mazuma. In the beginning, we had an easy onboarding process. Recently, things become much more efficient as they've created dedicated Mazuma contact."
         },
         {
             "img" : review6,
@@ -43,8 +43,7 @@ const Testimonials = () => {
     const settings = {
         className: "center",
         centerMode: true,
-        infinite: true,
-        centerPadding: "60px",
+        infinite: true,        
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
@@ -55,13 +54,23 @@ const Testimonials = () => {
             {
               breakpoint: 1800,
               settings: {
+                centerPadding: "60px",
                 slidesToShow: 3,
                 slidesToScroll: 3
               }
             },
             {
+                breakpoint: 1199,
+                settings: {
+                  centerPadding: "20px",
+                  slidesToShow: 3,
+                  slidesToScroll: 3
+                }
+              },
+            {
               breakpoint: 991,
               settings: {
+                centerPadding: "10px",
                 slidesToShow: 2,
                 slidesToScroll: 2
               }
@@ -82,16 +91,16 @@ const Testimonials = () => {
                         {reviews.map((item, index) => {
                           return (
                             <div key={index}>
-                                <div className="testimonial-item shadow d-flex flex-column bg-white rounded-3 mx-md-3 p-md-3 m-md-5 m-sm-5 p-sm-3 ">                        
-                                    <div className="w-100 d-flex justify-content-start flex-row align-items-start">
+                                <div className="testimonial-item shadow d-flex flex-column bg-white rounded-3 mx-lg-3 mx-md-3 p-md-3 m-md-5 my-sm-5 mx-sm-3 p-sm-3 ">                        
+                                    <div className="w-100 d-flex justify-content-start flex-row align-items-center">
                                         <div className="bg-white circle-55">                                      
                                             <img src={item.img} alt={item.title} className="rounded-circle p-0 m-0 w-100"/>
                                         </div>
                                         <div className="ps-3">
-                                            <h4 className="fs-4 text lh-sm mb-0 text-secondary-dark">{item.title}</h4>
+                                            <h4 className="fs-4 text my-0 py-0 lh-sm mb-0 text-secondary-dark">{item.title}</h4>
                                         </div>
                                     </div>                        
-                                    <p className="fs-6 text lh-base mt-2 mb-0 text-dark">{item.review}</p>
+                                    <p className="mt-1 mb-0 text-dark">{item.review}</p>
                                 
                                 </div>
                             </div>
