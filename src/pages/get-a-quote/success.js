@@ -24,7 +24,7 @@ const Success = (props) => {
                         <h2 className="display-5 my-2 w-100"><span>&#163;</span>{quoteprice}</h2>
                         <h6 className="display-6 mb-5 fw-bolder">Quote Price</h6>
                         <p>This quote is based upon the information that you have given us and an average number of transactions</p>
-                        <p className="gray">Your monthly subscription will cost, excluding VAT, this is for our basic package. We know that choosing an accountant is a big deal, so we’re offering a 10% discount if you sign up with Mazuma in July 2021! If you’d like sign up simply book a call with an advisor below. The onboarding process is quick and easy.</p>                        
+                        <p className="gray">Your monthly subscription will cost, excluding VAT, this is for our basic package. If you’d like sign up simply book a call with an advisor below. The onboarding process is quick and easy.</p>                        
                     </div>
                 </div>
             </div>

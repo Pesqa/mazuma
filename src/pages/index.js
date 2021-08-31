@@ -18,7 +18,7 @@ const IndexPage = () => {
   <Layout page="home">
     <Seo title="Home" />
     <Hero2/>    
-    <Logos/>
+    {/* <Logos/>
     <HappyClients />
     <div className="renters-block pt-md-4 mt-md-5 pt-sm-4 mt-sm-5">
       <div className="container pb-5 mb-5">
@@ -134,7 +134,7 @@ const IndexPage = () => {
     <ModalBox
         show={modalShow}
         onHide={() => setModalShow(false)}
-      />
+      /> */}
   </Layout>
 )
 }
