@@ -44,7 +44,7 @@ const Step4 = ({step, business, company, firstname, lastname, vat, dispatch}) =>
                         <div className="col-md-6 col-xs-6 py-md-1">
                             <label className="d-flex justify-content-center">
                             <input type="radio" value="1" checked = {vat == 1} onChange={e=>handleClick(e)} name="vat"/>
-                                <span>Yes, I’m</span>
+                                <span>Yes</span>
                             </label>
                         </div>
                         <div className="col-md-6 col-xs-6 py-md-1">
