@@ -1,41 +1,41 @@
 import React, { createRef, useEffect } from "react";
 import { Link } from 'gatsby'
-import lottie from 'lottie-web';
+// import lottie from 'lottie-web';
 
-import animLeft from '../assets/animations/left-anim.json';
-import animRight from '../assets/animations/right-anim.json';
+// import animLeft from '../assets/animations/left-anim.json';
+// import animRight from '../assets/animations/right-anim.json';
 const Hero2 = () => {
-    let animLeftContainer = createRef();
-    let animRightContainer = createRef();
-    let animL = null;
-    let animR = null;
-    useEffect(() => {
-      animL = lottie.loadAnimation({
-        container: animLeftContainer.current,
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        animationData: animLeft
-      });
-      animR = lottie.loadAnimation({
-        container: animRightContainer.current,
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        animationData: animRight
-      });
-      return () => {
-        animL.destroy();
-        animR.destroy();
-      }
+    // let animLeftContainer = createRef();
+    // let animRightContainer = createRef();
+    // let animL = null;
+    // let animR = null;
+    // useEffect(() => {
+    //   animL = lottie.loadAnimation({
+    //     container: animLeftContainer.current,
+    //     renderer: "svg",
+    //     loop: true,
+    //     autoplay: true,
+    //     animationData: animLeft
+    //   });
+    //   animR = lottie.loadAnimation({
+    //     container: animRightContainer.current,
+    //     renderer: "svg",
+    //     loop: true,
+    //     autoplay: true,
+    //     animationData: animRight
+    //   });
+    //   return () => {
+    //     animL.destroy();
+    //     animR.destroy();
+    //   }
       
-    }, []);
+    // }, []);
   
     return(
       <div className="container-fluid m-md-0 px-0 pt-lg-5 overflow-hidden">
         <div className="animation-block row d-flex justify-content-md-between justify-content-sm-center position-relative">
             <div className="col-lg-3 col-md-4 animation-left pe-5 d-sm-none d-md-block">
-                <span ref={animLeftContainer}></span>
+                {/* <span ref={animLeftContainer}></span> */}
             </div>
                 <div className="col-lg-6 col-md-4 col-sm-12 animation-mid-block col-sm-12 d-flex justify-content-center">
                     <div className="w-100 mt-md-3 pt-3">
@@ -52,7 +52,7 @@ const Hero2 = () => {
                     </div>
                 </div>
             <div className="col-lg-3 col-md-4 animation-right col-sm-12 ps-0 p-md-0">
-                <span ref={animRightContainer}></span>
+                {/* <span ref={animRightContainer}></span> */}
             </div>
         </div>
         </div>
