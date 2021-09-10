@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
@@ -57,7 +50,7 @@ function Seo({ description, lang, meta, title, schema }) {
        <meta name="twitter:url" content={curl} />
        <meta name="twitter:image" content={siteLogo} />
        {schema && <script type="application/ld+json">{JSON.stringify(schema)}</script>}
-       {cpath && <link rel="canonical" href={`${siteURL}${cpath}`} />}
+       {cpath && <link rel="canonical" href={`${siteURL}`} />}
        <style>{`.async-hide { opacity: 0 !important} `}</style>
         <script>{`(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
         h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
