@@ -19,7 +19,7 @@ function Seo({ description, lang, meta, title, schema }) {
             title
             description
             author
-            siteUrl
+            siteURL
           }
         }
         SiteLogo: file(relativePath: {eq: "logo.png"}) {
@@ -28,7 +28,7 @@ function Seo({ description, lang, meta, title, schema }) {
       }
     `
   )
-
+  const siteURL = site.siteMetadata.siteURL 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const siteLogo = siteURL+SiteLogo.publicURL;
