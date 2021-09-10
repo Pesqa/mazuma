@@ -72,8 +72,8 @@ function Seo({ description, lang, meta, title, schema }) {
         })(window,document,'script','dataLayer','GTM-529BF3X');`}</script>
         <script src="https://www.googleoptimize.com/optimize.js?id=OPT-K4G3FJR"></script>
 
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-529BF3X"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript>{`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-529BF3X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>`}</noscript>
      </Helmet>
   )
 }
