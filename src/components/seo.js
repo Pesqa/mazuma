@@ -33,6 +33,7 @@ function Seo({ description, lang, meta, title, schema }) {
   const defaultTitle = site.siteMetadata?.title
   const siteLogo = siteURL+SiteLogo.publicURL;
   const curl = siteURL
+  const cpath = siteURL
   return (
     <Helmet      
         htmlAttributes={{
