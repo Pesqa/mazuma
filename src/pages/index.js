@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/common/layout"
-import Seo from "../components/seo"
+
 import Hero2 from "../components/hero2"
 import Logos from "../components/logos"
 import HappyClients from "../components/happyClients"
@@ -15,8 +15,7 @@ const IndexPage = () => {
     setOpen(true)
   }
   return (
-  <Layout page="home">
-    <Seo title="Home" />
+  <Layout page="home" seoTitle="home">
     <Hero2/>    
     <Logos/>
     <HappyClients />

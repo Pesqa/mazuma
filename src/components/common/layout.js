@@ -8,13 +8,13 @@ import SideBar from "../common/SideMenu"
 
 import { HomeMenuStyles } from "../../layout/HomeMenuStyles"
 
-
+import Seo from "../seo"
 
 
 import HomeHeader from "./homeheader"
 import Header from "./header"
 import Footer from "./footer"
-const Layout = ({ page, children }) => {
+const Layout = ({ page, children, seoTitle='' }) => {
   const [isOpen, setOpen] = React.useState(false);
   const handlers = useSwipeable({
     trackMouse: true,
@@ -73,7 +73,9 @@ const Layout = ({ page, children }) => {
       window.removeEventListener('scroll', () => handleScroll);
     };
   }, []);
-  return (  
+  return ( 
+    <>
+    <Seo title={seoTitle} /> 
     <div id="outer" className={ page === 'home' ? 'home' : 'default'} >
       {/* { page === 'home' && (
         <>
@@ -102,6 +104,7 @@ const Layout = ({ page, children }) => {
     </div>
     { page === 'home' && <Footer logoImg={FooterLogo} appstoreImg={appstoreImg} playstoreImg={playstoreImg} />  }  
     </div>
+    </>
   )
 }
 
