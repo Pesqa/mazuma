@@ -11,7 +11,7 @@ const Success = (props) => {
             props.dispatch({
                 type: 'RESET'
             });
-            navigate('https://calendly.com/mazumadvinen/30min');
+            navigate('https://calendly.com/mazumadvinen/30min?month=2021-09&utm_source=landingPage&utm_medium=test2');
         }, 3000);
      });
 
