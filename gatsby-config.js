@@ -15,7 +15,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
       },
-    },
+    },    
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
@@ -70,7 +70,13 @@ module.exports = {
         useMinify: true,
         usePreload: true
       },
-    }      
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://mazumamoney.us2.list-manage.com/subscribe/post?u=91da68719dd060ecc822e6664&amp;id=8a9205e6fb'
+      }  
+    }   
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

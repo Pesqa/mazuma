@@ -2,6 +2,7 @@ const initialState = {
     step: 1,
     business: '',
     company:'',
+    email : '',
     firstname: '',
     lastname: '',
     vat: null,
@@ -14,6 +15,7 @@ const initialState = {
   const PREV_STEP = 'PREV_STEP';
   const ADD_BUSINESS = 'ADD_BUSINESS';
   const ADD_COMPANY = 'ADD_COMPANY';
+  const ADD_EMAIL = 'ADD_EMAIL';
   const ADD_FIRSTNAME = 'ADD_FIRSTNAME';
   const ADD_LASTNAME = 'ADD_LASTNAME';
   const ADD_VAT = 'ADD_VAT';
@@ -25,6 +27,7 @@ const initialState = {
   export const stepPrevStep = num => ({ type: PREV_STEP, payload: num });
   export const addBusiness = input => ({ type: ADD_BUSINESS, payload: input });
   export const addCompany = input => ({ type: ADD_COMPANY, payload: input });
+  export const addEmail = input => ({ type: ADD_EMAIL, payload: input });
   export const addFirstname = input => ({ type: ADD_FIRSTNAME, payload: input });
   export const addLastname = input => ({ type: ADD_LASTNAME, payload: input });
 
@@ -55,6 +58,11 @@ const initialState = {
             return {
                 ...state,
                 company: payload
+            } 
+        case 'ADD_EMAIL':
+            return {
+                ...state,
+                email: payload
             } 
         case 'ADD_FIRSTNAME':
             return {
@@ -92,6 +100,7 @@ const initialState = {
                 step: 1,
                 business: '',
                 company:'',
+                email: '',
                 firstname: '',
                 lastname: '',
                 vat: null,

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import FormHead from '../../components/FormHead'
 import Layout from "../../components/common/layout"
 
-const Step4 = ({step, business, company, firstname, lastname, vat, dispatch}) => {
+const Step4 = ({step, business, company, firstname, lastname, email, vat, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
     useEffect(() => {
         if(step<4){
@@ -70,6 +70,7 @@ const mapStateToProps = state => {
         step: state.app.step,
         business: state.app.business,
         company: state.app.company,
+        email: state.app.email,
         firstname: state.app.firstname,
         lastname: state.app.lastname,
         vat: state.app.vat
