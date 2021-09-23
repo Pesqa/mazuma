@@ -23,9 +23,7 @@ const Step4 = ({step, business, company, email, firstname, lastname, vat, payrol
     }, [step]); 
     const submitHandler = (e) => {
       e.preventDefault();
-      console.log('Email address0', email)
-      alert(email)
-      addToMailchimp(email) // listFields are optional if you are only capturing the email address.
+      addToMailchimp(email,{ FNAME : firstname, LNAME : lastname}) // listFields are optional if you are only capturing the email address.
       .then(data => {
         // I recommend setting data to React state
         // but you can do whatever you want (including ignoring this `then()` altogether)
