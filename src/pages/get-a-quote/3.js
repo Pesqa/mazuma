@@ -35,6 +35,7 @@ const Step3 = ({step, business, company, email, firstname, lastname, dispatch}) 
                 setFormIsValid(true)
                 setErrors(null)   
             }
+            
         } else if (e.target.name==='firstname'){
             action_name = 'ADD_FIRSTNAME'
         } else if (e.target.name==='lastname'){
@@ -43,7 +44,8 @@ const Step3 = ({step, business, company, email, firstname, lastname, dispatch}) 
         dispatch({
             type: action_name,
             payload: e.target.value,
-        });       
+        });      
+        console.log('Level Email', email) 
       }
     return(
         <Layout>
