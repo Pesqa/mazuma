@@ -74,7 +74,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-          endpoint: 'https://mazumamoney.us2.list-manage.com/subscribe/post?u=91da68719dd060ecc822e6664&amp;id=8a9205e6fb'
+          endpoint: 'https://mazumamoney.us2.list-manage.com/subscribe/post?u=91da68719dd060ecc822e6664&amp;id=60511c7d77'                    
       }  
     }   
     // this (optional) plugin enables Progressive Web App + Offline functionality
