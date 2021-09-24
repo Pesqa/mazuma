@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { connect } from 'react-redux';
-// import FHeadImg from "../assets/images/form-head-bg2.png"
+import oliverPic from "../assets/images/oliver-pic.png"
 // import ArinaPic from "../assets/images/arina-pic.png"
 const FormHead = ({step, dispatch }) => {
     const handleSubmitBack = () => {
@@ -22,7 +22,8 @@ const FormHead = ({step, dispatch }) => {
                 {step != 1 && <button onClick={handleSubmitBack} className="bg-white border-0 text-end">Back</button>}
                 </div>
                 <div className="border border-dark rounded-circle bg-white text-dark round-block d-flex justify-content-center align-items-center">
-                <StaticImage src="../assets/images/oliver-pic.png" alt="Arina Pic" className="w-100 rounded-circle"/>
+                {/* <StaticImage src="../assets/images/oliver-pic.png" alt="Oliver Pic" className="w-100 rounded-circle"/> */}
+                <img src={oliverPic} alt="Oliver Pic" className="w-100 rounded-circle"/>
                 </div>
                 <div className="bg-white text-dark round-block d-flex justify-content-end align-items-center m-0 p-0">
                 {step != 1 && <button onClick={handleSubmitRestart} className="bg-white border-0 text-end">Restart</button>}
