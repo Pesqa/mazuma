@@ -34,7 +34,7 @@ const Step1 = ({step, business, dispatch}) => {
           
           <div className="row d-flex justify-content-center">
               <div className="col-md-8 col-sm-10 text-center">
-              <h2 className="form-sub-heading display-5 mb-3 w-100">Hey! I’m Daniel, plz select the type of your business</h2> 
+              <h2 className="form-sub-heading display-5 mb-3 w-100">Hey! I’m Oliver, plz select the type of your business</h2> 
               </div>
           </div>  
           <div className="row d-flex justify-content-center">
