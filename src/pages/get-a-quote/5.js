@@ -6,7 +6,7 @@ import { Encrypt } from '../../utils/functions'
 import FormHead from '../../components/FormHead'
 import Layout from "../../components/common/layout"
 
-const Step4 = ({step, business, company, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
+const Step4 = ({step, business, company, email, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
     const [equote, setEquote] = useState(0);
     useEffect(() => {
@@ -158,6 +158,7 @@ const mapStateToProps = state => {
         step: state.app.step,
         business: state.app.business,
         company: state.app.company,
+        email: state.app.email,
         firstname: state.app.firstname,
         lastname: state.app.lastname,
         vat: state.app.vat,
