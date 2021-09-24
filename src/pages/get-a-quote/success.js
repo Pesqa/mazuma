@@ -7,6 +7,7 @@ import Layout from "../../components/common/layout"
 const Success = (props) => {
     const params = new URLSearchParams(props.location.search);
     const quoteprice = params.get("v");
+    const email = params.get("email");
     const firstname = params.get("fname");
     const lastname = params.get("lname");
     useEffect(() => {
