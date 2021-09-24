@@ -1,23 +1,37 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 import Layout from "../../components/common/layout"
 
 const Success = (props) => {
     const params = new URLSearchParams(props.location.search);
     const quoteprice = params.get("v");
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         props.dispatch({
-    //             type: 'RESET'
-    //         });
-    //         navigate('https://calendly.com/mazumadvinen/30min?month=2021-09&utm_source=landingPage&utm_medium=test2');
-    //     }, 3000);
-    //  });
+    const firstname = params.get("fname");
+    const lastname = params.get("lname");
+    useEffect(() => {
+        setTimeout(() => {
+            addToMailchimp(email,{ FNAME : firstname, LNAME : lastname})
+            .then(data => {
+                console.log(data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+            props.dispatch({
+                type: 'RESET'
+            });
+            navigate('https://calendly.com/ogray-2/30min');
+        }, 3000);
+     });
 
      
     return(
         <Layout>
+            <form>   
+            <input type="hidden" name="EMAIL" value={email}/>   
+            <input type="hidden" name="FNAME" value={firstname}/>
+            <input type="hidden" name="LNAME" value={lastname}/>           
             <div className="container d-flex flex-column justify-content-center text-center">
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-6 col-sm-9 col-xs-12">            
@@ -28,6 +42,7 @@ const Success = (props) => {
                     </div>
                 </div>
             </div>
+            </form>
         </Layout>        
     )
 }
