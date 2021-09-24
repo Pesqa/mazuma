@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { navigate } from 'gatsby'
 import { connect } from 'react-redux';
 import { Encrypt } from '../../utils/functions'
@@ -7,7 +6,7 @@ import { Encrypt } from '../../utils/functions'
 import FormHead from '../../components/FormHead'
 import Layout from "../../components/common/layout"
 
-const Step4 = ({step, business, company, email, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
+const Step4 = ({step, business, company, firstname, lastname, vat, payroll, payslips, quoteprice, dispatch}) => {
     const [btnstatus, setBtnstatus] = useState(vat ? true : false);
     const [equote, setEquote] = useState(0);
     useEffect(() => {
@@ -21,21 +20,8 @@ const Step4 = ({step, business, company, email, firstname, lastname, vat, payrol
         }
       }      
     }, [step]); 
-    const submitHandler = (e) => {
-      e.preventDefault();
-      addToMailchimp(email,{ FNAME : firstname, LNAME : lastname}) // listFields are optional if you are only capturing the email address.
-      .then(data => {
-        // I recommend setting data to React state
-        // but you can do whatever you want (including ignoring this `then()` altogether)
-        console.log(data)
-      })
-      .catch((err) => {
-        // unnecessary because Mailchimp only ever
-        // returns a 200 status code
-        // see below for how to handle errors
-        console.log(err)
-      })
-      navigate('/get-a-quote/success?v='+quoteprice);
+    const submitHandler = ()=>{
+      
     }
     const handleClick = (e) => {    
         dispatch({
@@ -108,13 +94,11 @@ const Step4 = ({step, business, company, email, firstname, lastname, vat, payrol
               </div>
           </div>    
           <div className="row d-flex justify-content-center">
-          <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">  
-          <form onSubmit={submitHandler}>   
-          {/* <form name="quoteform" method="POST" data-netlify="true" action={ `/get-a-quote/success?v=${quoteprice}` } onSubmit={submitHandler}> */}
-          {/* <input type="hidden" name="form-name" value="quoteform"/>  */}
-          <input type="hidden" name="EMAIL" value={email}/>   
-          <input type="hidden" name="FNAME" value={firstname}/>
-          <input type="hidden" name="LNAME" value={lastname}/>                
+          <div className="col-lg-4 col-md-6 col-sm-9 col-xs-12">     
+          <form name="quoteform" method="POST" data-netlify="true" action={ `/get-a-quote/success?v=${quoteprice}` } onSubmit={submitHandler}>
+          <input type="hidden" name="form-name" value="quoteform"/>    
+          <input type="hidden" name="name" value={firstname}/>
+          <input type="hidden" name="lastname" value={lastname}/>                
           <input type="hidden" name="business" value={business}/>
           <input type="hidden" name="company" value={company}/>          
           <input type="hidden" name="vat" value={vat ==1 ? 'Yes' : 'No'}/>
@@ -174,7 +158,6 @@ const mapStateToProps = state => {
         step: state.app.step,
         business: state.app.business,
         company: state.app.company,
-        email: state.app.email,
         firstname: state.app.firstname,
         lastname: state.app.lastname,
         vat: state.app.vat,
