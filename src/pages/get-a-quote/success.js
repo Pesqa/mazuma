@@ -23,7 +23,7 @@ const Success = (props) => {
                 type: 'RESET'
             });
             navigate('https://calendly.com/ogray-2/30min');
-        }, 3000);
+        }, 2000);
      });
 
      
