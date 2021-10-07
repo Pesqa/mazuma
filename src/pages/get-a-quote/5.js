@@ -98,7 +98,8 @@ const Step4 = ({step, business, company, email, firstname, lastname, vat, payrol
           <form name="quoteform" method="POST" data-netlify="true" action={ `/get-a-quote/success?v=${quoteprice}&email=${email}&fname=${firstname}&lname=${lastname}` } onSubmit={submitHandler}>
           <input type="hidden" name="form-name" value="quoteform"/>    
           <input type="hidden" name="name" value={firstname}/>
-          <input type="hidden" name="lastname" value={lastname}/>                
+          <input type="hidden" name="lastname" value={lastname}/>    
+          <input type="hidden" name="email" value={email}/>               
           <input type="hidden" name="business" value={business}/>
           <input type="hidden" name="company" value={company}/>          
           <input type="hidden" name="vat" value={vat ==1 ? 'Yes' : 'No'}/>
